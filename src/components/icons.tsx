@@ -119,3 +119,65 @@ export function MapPinIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function HeartIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 20s-7.5-4.6-9.75-9.1C.85 7.6 2.2 4.5 5.3 4c2-.3 3.7.6 4.7 2.2C11 4.6 12.7 3.7 14.7 4c3.1.5 4.45 3.6 3.05 6.9C15.5 15.4 12 20 12 20Z" />
+    </svg>
+  );
+}
+
+export function AwardIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <circle cx="12" cy="9" r="5.25" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m8.5 13.5-1.4 6.5 4.9-2.6 4.9 2.6-1.4-6.5" />
+    </svg>
+  );
+}
+
+export function DownloadIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.5v11m0 0 3.75-3.75M12 14.5l-3.75-3.75" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 16v2.75A1.75 1.75 0 0 0 6.25 20.5h11.5a1.75 1.75 0 0 0 1.75-1.75V16" />
+    </svg>
+  );
+}
+
+export function GaugeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 15a8 8 0 1 1 16 0" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 15 15.5 10" />
+      <path strokeLinecap="round" d="M12 15h.01" />
+    </svg>
+  );
+}
+
+export function SettingsIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <circle cx="12" cy="12" r="2.75" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.5v2.2M12 18.3v2.2M20.5 12h-2.2M5.7 12H3.5M17.6 6.4l-1.55 1.55M7.95 16.05 6.4 17.6M17.6 17.6l-1.55-1.55M7.95 7.95 6.4 6.4" />
+    </svg>
+  );
+}
+
+export function EyeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.5 12S6.5 6 12 6s8.5 6 8.5 6-3 6-8.5 6S3.5 12 3.5 12Z" />
+      <circle cx="12" cy="12" r="2.5" />
+    </svg>
+  );
+}
+
+export function BoltIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.5 5.5 13.25h4.75L11 20.5l7.25-9.75h-4.75l-1-7.25Z" />
+    </svg>
+  );
+}
