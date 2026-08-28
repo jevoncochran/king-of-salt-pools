@@ -119,3 +119,20 @@ export function MapPinIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function HeartIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 20s-7.5-4.6-9.75-9.1C.85 7.6 2.2 4.5 5.3 4c2-.3 3.7.6 4.7 2.2C11 4.6 12.7 3.7 14.7 4c3.1.5 4.45 3.6 3.05 6.9C15.5 15.4 12 20 12 20Z" />
+    </svg>
+  );
+}
+
+export function AwardIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <circle cx="12" cy="9" r="5.25" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m8.5 13.5-1.4 6.5 4.9-2.6 4.9 2.6-1.4-6.5" />
+    </svg>
+  );
+}
