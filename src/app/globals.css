@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #261e35;
+
+  /* Brand colors sampled from the King of Salt Pools logo */
+  --color-brand-navy: #261e35;
+  --color-brand-navy-light: #3a2e4f;
+  --color-brand-gold: #ebab1e;
+  --color-brand-gold-light: #f5c04d;
+  --color-brand-gold-dark: #c68d12;
+
+  /* Supporting pool-water accent, not from the logo */
+  --color-brand-aqua: #1fb6c9;
+  --color-brand-mist: #eefcfb;
+  --color-brand-sand: #f7f4ee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--color-brand-navy);
+  --color-navy-light: var(--color-brand-navy-light);
+  --color-gold: var(--color-brand-gold);
+  --color-gold-light: var(--color-brand-gold-light);
+  --color-gold-dark: var(--color-brand-gold-dark);
+  --color-aqua: var(--color-brand-aqua);
+  --color-mist: var(--color-brand-mist);
+  --color-sand: var(--color-brand-sand);
+  --font-sans: var(--font-body);
+  --font-accent: var(--font-accent);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
