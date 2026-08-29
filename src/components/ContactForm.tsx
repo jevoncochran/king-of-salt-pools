@@ -6,6 +6,7 @@ import {
   contactDays,
   contactTimeSlots,
   howHeardOptions,
+  poolSizeOptions,
 } from "@/lib/contact-schedule";
 import { siteConfig } from "@/lib/site-config";
 import { formatPhoneNumber } from "@/lib/format";
@@ -19,6 +20,7 @@ const initialFormData = {
   streetAddress: "",
   city: "",
   howHeard: "",
+  poolSize: "",
   preferredDay: "",
   preferredTime: "",
 };
@@ -207,7 +209,7 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="sm:col-span-2">
+        <div>
           <label htmlFor="howHeard" className={labelClasses}>
             How did you hear about us?
           </label>
@@ -220,6 +222,26 @@ export default function ContactForm() {
           >
             <option value="">Select an option</option>
             {howHeardOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="poolSize" className={labelClasses}>
+            How big is your pool?
+          </label>
+          <select
+            id="poolSize"
+            name="poolSize"
+            value={formData.poolSize}
+            onChange={(e) => updateField("poolSize", e.target.value)}
+            className={inputClasses}
+          >
+            <option value="">Select an option</option>
+            {poolSizeOptions.map((option) => (
               <option key={option} value={option}>
                 {option}
               </option>
