@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import { submitQuoteRequest } from "@/app/contact/actions";
 import {
   contactDays,
@@ -21,6 +21,8 @@ const initialFormData = {
   city: "",
   howHeard: "",
   poolSize: "",
+  hasSaltSystem: false,
+  poolPhoto: null as File | null,
   preferredDay: "",
   preferredTime: "",
 };
@@ -30,6 +32,9 @@ type FormData = typeof initialFormData;
 const inputClasses =
   "w-full rounded-md border border-navy/15 bg-white px-3.5 py-2.5 text-sm text-navy placeholder:text-navy/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 transition-colors";
 
+const fileInputClasses =
+  "block w-full cursor-pointer text-sm text-navy/70 file:mr-4 file:cursor-pointer file:rounded-md file:border-0 file:bg-gold file:px-4 file:py-2.5 file:text-xs file:font-bold file:uppercase file:tracking-wide file:text-navy hover:file:bg-gold-light";
+
 const labelClasses = "block text-sm font-semibold text-navy mb-1.5";
 
 export default function ContactForm() {
@@ -37,9 +42,22 @@ export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [fileError, setFileError] = useState<string | null>(null);
 
   function updateField<K extends keyof FormData>(field: K, value: FormData[K]) {
     setFormData((prev) => ({ ...prev, [field]: value }));
+  }
+
+  function handlePhotoChange(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0] ?? null;
+    if (file && file.size > 10 * 1024 * 1024) {
+      setFileError("Photo must be smaller than 10MB.");
+      e.target.value = "";
+      updateField("poolPhoto", null);
+      return;
+    }
+    setFileError(null);
+    updateField("poolPhoto", file);
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -247,6 +265,46 @@ export default function ContactForm() {
               </option>
             ))}
           </select>
+        </div>
+      </div>
+
+      <div className="mt-8 border-t border-navy/10 pt-6">
+        <p className={labelClasses}>About Your Pool</p>
+
+        <div className="mt-3 flex items-center gap-2.5">
+          <input
+            id="hasSaltSystem"
+            name="hasSaltSystem"
+            type="checkbox"
+            checked={formData.hasSaltSystem}
+            onChange={(e) => updateField("hasSaltSystem", e.target.checked)}
+            className="size-4 rounded border-navy/30 text-gold-dark focus:ring-2 focus:ring-gold/30"
+          />
+          <label htmlFor="hasSaltSystem" className="text-sm font-semibold text-navy">
+            Check here if you already have a salt system
+          </label>
+        </div>
+
+        <div className="mt-5">
+          <label htmlFor="poolPhoto" className={labelClasses}>
+            Upload a Photo of Your Pool
+          </label>
+          <input
+            id="poolPhoto"
+            name="poolPhoto"
+            type="file"
+            accept="image/*"
+            onChange={handlePhotoChange}
+            className={fileInputClasses}
+          />
+          {formData.poolPhoto && !fileError && (
+            <p className="mt-1.5 text-xs text-navy/50">
+              Selected: {formData.poolPhoto.name}
+            </p>
+          )}
+          {fileError && (
+            <p className="mt-1.5 text-xs font-semibold text-red-600">{fileError}</p>
+          )}
         </div>
       </div>
 
