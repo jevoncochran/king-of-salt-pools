@@ -14,8 +14,10 @@ import {
   LeafIcon,
   SettingsIcon,
   ShieldCheckIcon,
+  SmartphoneIcon,
   SmileIcon,
   SparkleIcon,
+  WrenchIcon,
 } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -88,6 +90,18 @@ const productFeatures = [
     description:
       "A built-in display shows chlorine output at a glance, and the system is self-contained — it works with or without pool automation.",
   },
+  {
+    icon: WrenchIcon,
+    title: "Easy to Install",
+    description:
+      "Available in two versions — one for new construction and one with 2\"–2½\" unions for retrofit installations — with a compact design that adapts to most equipment pads.",
+  },
+  {
+    icon: SmartphoneIcon,
+    title: "Smart Control Ready",
+    description:
+      "Pair it with a Jandy AquaLink® automation system and control your salt output right from your phone with the iAquaLink™ app.",
+  },
 ];
 
 const specs = [
@@ -95,6 +109,7 @@ const specs = [
   { value: "35,000 gal", label: "Max pool size" },
   { value: "20 GPM", label: "Low-flow operation" },
   { value: "120V / 240V", label: "Hard-wired power" },
+  { value: "3 Years", label: "Standard warranty" },
 ];
 
 export default function WhySaltPage() {
@@ -170,9 +185,9 @@ export default function WhySaltPage() {
             <Image
               src="/assets/images/why-salt/truclear-system.png"
               alt="Jandy TruClear salt chlorinator control panel and cell"
-              width={980}
-              height={898}
-              className="h-auto w-full max-w-sm"
+              width={1042}
+              height={1445}
+              className="h-auto w-full max-w-xs"
             />
           </div>
 
@@ -190,7 +205,7 @@ export default function WhySaltPage() {
               integrate into most existing equipment pads.
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
               {specs.map((spec) => (
                 <div
                   key={spec.label}
@@ -204,11 +219,22 @@ export default function WhySaltPage() {
               ))}
             </div>
 
+            <div className="mt-6 rounded-lg border border-gold/30 bg-gold/10 px-4 py-3">
+              <p className="text-sm text-navy/80">
+                <span className="font-bold text-navy">
+                  Reduce chlorine use by up to 50%.
+                </span>{" "}
+                Pair your TruClear system with a Jandy TruGuard™ mineral
+                sanitizer to cut down on chlorine even further — ask us if
+                that upgrade makes sense for your pool.
+              </p>
+            </div>
+
             <a
               href="/brochures/jandy-truclear-brochure.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gold-dark hover:text-navy transition-colors"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gold-dark hover:text-navy transition-colors"
             >
               <DownloadIcon className="size-4" />
               Download the Full Brochure (PDF)
@@ -246,14 +272,14 @@ export default function WhySaltPage() {
             ))}
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <figure className="overflow-hidden rounded-2xl border border-navy/10 bg-sand">
               <Image
                 src="/assets/images/why-salt/truclear-lid.png"
                 alt="Close-up of the TruClear transparent inspection lid"
                 width={596}
                 height={834}
-                className="mx-auto h-72 w-auto object-contain py-6"
+                className="mx-auto h-64 w-auto object-contain py-6"
               />
               <figcaption className="border-t border-navy/10 bg-white px-6 py-3 text-sm font-semibold text-navy">
                 Inspect for calcium buildup at a glance
@@ -265,10 +291,22 @@ export default function WhySaltPage() {
                 alt="Close-up of the TruClear salt cell and valve body"
                 width={806}
                 height={1103}
-                className="mx-auto h-72 w-auto object-contain py-6"
+                className="mx-auto h-64 w-auto object-contain py-6"
               />
               <figcaption className="border-t border-navy/10 bg-white px-6 py-3 text-sm font-semibold text-navy">
                 A durable cell built for years of service
+              </figcaption>
+            </figure>
+            <figure className="overflow-hidden rounded-2xl border border-navy/10 bg-sand">
+              <Image
+                src="/assets/images/why-salt/truclear-cell-front.png"
+                alt="Front view of the TruClear salt cell showing the flow-direction ports"
+                width={1348}
+                height={1500}
+                className="mx-auto h-64 w-auto object-contain py-6"
+              />
+              <figcaption className="border-t border-navy/10 bg-white px-6 py-3 text-sm font-semibold text-navy">
+                Balanced flow ports for consistent output
               </figcaption>
             </figure>
           </div>

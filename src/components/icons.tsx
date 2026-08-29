@@ -181,3 +181,20 @@ export function BoltIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function SmartphoneIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <rect x="6.5" y="2.75" width="11" height="18.5" rx="2" />
+      <path strokeLinecap="round" d="M10.5 18.25h3" />
+    </svg>
+  );
+}
+
+export function WrenchIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a4 4 0 0 0-5.4 4.6L4 16.2v3.3h3.3l5.3-5.3a4 4 0 0 0 4.6-5.4l-2.6 2.6-2.1-2.1 2.6-2.6Z" />
+    </svg>
+  );
+}

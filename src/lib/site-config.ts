@@ -17,7 +17,7 @@ export const navLinks = [
   { href: "/warranty", label: "Warranty" },
 ] as const;
 
-export const quoteHref = "/quote";
+export const quoteHref = "/contact";
 
 // TODO: confirm the exact service area / city list with the client.
 export const serviceAreaCities = [
