@@ -151,11 +151,11 @@ export default function Home() {
               See It In Action
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
-              A Closer Look at the TruClear System
+              See a Salt System in Action
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              Take a quick look at how the Jandy TruClear salt chlorinator
-              works and what it takes to get your pool converted.
+              Take a quick look at how a salt system works and what it takes
+              to get your pool converted.
             </p>
           </div>
           <div className="mt-10 max-w-3xl mx-auto">
@@ -208,15 +208,15 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* TRUCLEAR REVIEWS */}
+      {/* SALT SYSTEM REVIEWS */}
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-2xl text-center mx-auto">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Jandy TruClear Reviews
+              Real Reviews
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
-              TruClear owners <span className="font-accent italic text-gold-dark">love</span> their pools
+              Salt pool owners <span className="font-accent italic text-gold-dark">love</span> their results
             </h2>
             <div className="mt-4 flex items-center justify-center gap-2 text-sm text-navy/70">
               <div className="flex gap-0.5 text-gold">
@@ -228,9 +228,9 @@ export default function Home() {
               <span>average across {jandyReviewSummary.totalReviews} reviews</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-navy/60">
-              We install the Jandy TruClear® salt chlorinator — here&rsquo;s what
-              real owners of that system are saying, straight from Jandy&rsquo;s
-              own product page.
+              We stand behind the equipment we install. Here&rsquo;s what real
+              owners of this system (Jandy TruClear®) have to say, straight
+              from the manufacturer&rsquo;s own site.
             </p>
           </div>
 

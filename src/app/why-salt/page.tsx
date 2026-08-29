@@ -6,15 +6,11 @@ import { quoteHref } from "@/lib/site-config";
 import {
   ArrowRightIcon,
   BoltIcon,
-  CheckCircleIcon,
   DownloadIcon,
   DropletIcon,
   EyeIcon,
-  GaugeIcon,
   LeafIcon,
-  SettingsIcon,
   ShieldCheckIcon,
-  SmartphoneIcon,
   SmileIcon,
   SparkleIcon,
   WrenchIcon,
@@ -23,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Why Salt?",
   description:
-    "Discover the benefits of switching to a saltwater pool and see what makes the Jandy TruClear salt chlorinator simple, reliable, and easy to maintain.",
+    "Discover the benefits of switching to a saltwater pool with King of Salt Pools — softer water, fewer chemicals, and simple, reliable equipment we stand behind.",
 };
 
 const coreBenefits = [
@@ -56,59 +52,32 @@ const coreBenefits = [
 const productFeatures = [
   {
     icon: EyeIcon,
-    title: "Transparent Lid Design",
+    title: "Easy to Check",
     description:
-      "Visually check for calcium buildup in seconds through a UV-protected inspection window that stays clear for years — no need to open or uninstall the unit.",
-  },
-  {
-    icon: SettingsIcon,
-    title: "Auto-Reversing Polarity",
-    description:
-      "The cell automatically reverses polarity to cut down on calcium buildup, keeping it cleaner for longer between services.",
-  },
-  {
-    icon: CheckCircleIcon,
-    title: "Tool-Free Servicing",
-    description:
-      "Unscrew the cell from the body, hold onto the cord, and dip it in cleaning solution — no tools needed for inspection, servicing, or cleaning.",
-  },
-  {
-    icon: ShieldCheckIcon,
-    title: "Extreme Reliability",
-    description:
-      "Built with Jandy's Never Lube® valve material for long-term durability, plus a patented gas trap that detects flow with no moving parts to wear out.",
-  },
-  {
-    icon: BoltIcon,
-    title: "Energy-Efficient",
-    description:
-      "Works at extremely low flow rates, so it's fully compatible with today's variable-speed pumps and won't fight your energy savings.",
-  },
-  {
-    icon: GaugeIcon,
-    title: "Digital Display",
-    description:
-      "A built-in display shows chlorine output at a glance, and the system is self-contained — it works with or without pool automation.",
+      "A simple viewing window lets you check for buildup in seconds — no tools, no guesswork, no need to take anything apart.",
   },
   {
     icon: WrenchIcon,
-    title: "Easy to Install",
+    title: "Low Maintenance",
     description:
-      "Available in two versions — one for new construction and one with 2\"–2½\" unions for retrofit installations — with a compact design that adapts to most equipment pads.",
+      "Cleaning and servicing takes minutes, and the system helps prevent buildup on its own between visits.",
   },
   {
-    icon: SmartphoneIcon,
-    title: "Smart Control Ready",
+    icon: ShieldCheckIcon,
+    title: "Built to Last",
     description:
-      "Pair it with a Jandy AquaLink® automation system and control your salt output right from your phone with the iAquaLink™ app.",
+      "Durable construction backed by a 3-year manufacturer warranty, so you're covered for years to come.",
+  },
+  {
+    icon: BoltIcon,
+    title: "Works With Your Pump",
+    description:
+      "Runs efficiently even at low flow, so it plays nicely with modern energy-saving pool pumps.",
   },
 ];
 
 const specs = [
-  { value: "18g/hr", label: "Chlorine output" },
   { value: "35,000 gal", label: "Max pool size" },
-  { value: "20 GPM", label: "Low-flow operation" },
-  { value: "120V / 240V", label: "Hard-wired power" },
   { value: "3 Years", label: "Standard warranty" },
 ];
 
@@ -193,19 +162,19 @@ export default function WhySaltPage() {
 
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              The Equipment We Install
+              Our Equipment
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
-              Meet the Jandy TruClear® Salt Chlorinator
+              Professional-Grade Equipment, Installed by Us
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              We install the Jandy TruClear salt chlorinator — a system built
-              for simple, reliable saltwater chlorination without sacrificing
-              performance. It's compact, easy to maintain, and designed to
-              integrate into most existing equipment pads.
+              We only install trusted, professional-grade salt systems
+              (Jandy TruClear®) — built to be reliable and easy to live
+              with, backed by a manufacturer warranty and our own
+              workmanship.
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            <div className="mt-8 grid grid-cols-2 gap-4">
               {specs.map((spec) => (
                 <div
                   key={spec.label}
@@ -217,17 +186,6 @@ export default function WhySaltPage() {
                   <p className="mt-1 text-xs text-navy/60">{spec.label}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-6 rounded-lg border border-gold/30 bg-gold/10 px-4 py-3">
-              <p className="text-sm text-navy/80">
-                <span className="font-bold text-navy">
-                  Reduce chlorine use by up to 50%.
-                </span>{" "}
-                Pair your TruClear system with a Jandy TruGuard™ mineral
-                sanitizer to cut down on chlorine even further — ask us if
-                that upgrade makes sense for your pool.
-              </p>
             </div>
 
             <a

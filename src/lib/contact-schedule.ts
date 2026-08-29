@@ -26,3 +26,11 @@ export const howHeardOptions = [
   "Saw Our Truck",
   "Other",
 ] as const;
+
+export const poolSizeOptions = [
+  "Under 15,000 gallons",
+  "15,000–25,000 gallons",
+  "25,000–35,000 gallons",
+  "Over 35,000 gallons",
+  "Not sure",
+] as const;

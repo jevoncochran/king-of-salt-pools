@@ -8,6 +8,7 @@ export type QuoteRequest = {
   streetAddress: string;
   city: string;
   howHeard: string;
+  poolSize: string;
   preferredDay: string;
   preferredTime: string;
 };
