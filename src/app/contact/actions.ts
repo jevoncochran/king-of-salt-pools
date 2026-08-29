@@ -9,6 +9,8 @@ export type QuoteRequest = {
   city: string;
   howHeard: string;
   poolSize: string;
+  hasSaltSystem: boolean;
+  poolPhoto: File | null;
   preferredDay: string;
   preferredTime: string;
 };
@@ -21,7 +23,13 @@ export async function submitQuoteRequest(data: QuoteRequest) {
     throw new Error("Missing required fields");
   }
 
-  console.log("New quote request:", JSON.stringify(data));
+  const { poolPhoto, ...rest } = data;
+  console.log("New quote request:", JSON.stringify(rest));
+  if (poolPhoto) {
+    console.log(
+      `Pool photo attached: ${poolPhoto.name} (${poolPhoto.size} bytes, ${poolPhoto.type})`,
+    );
+  }
 
   return { success: true as const };
 }
