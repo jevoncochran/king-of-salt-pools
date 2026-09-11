@@ -28,8 +28,13 @@ const familyMembers = [
   },
   {
     src: "/assets/images/about/daughter.jpg",
-    name: "The Newest Team Member",
+    name: "The Littlest Team Member",
     role: "Chief Salt Supervisor (in training)",
+  },
+  {
+    src: "/assets/images/about/daughter-2.jpg",
+    name: "The Newest Team Member",
+    role: "Team Member",
   },
 ];
 
@@ -131,11 +136,11 @@ export default function AboutPage() {
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
               This is a real family business — Nick handles every
               installation personally, Fernanda helps keep things running,
-              and their daughter already loves tagging along on the job.
+              and their daughters love tagging along on the job.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {familyMembers.map((member) => (
               <div
                 key={member.name}
@@ -146,6 +151,7 @@ export default function AboutPage() {
                     src={member.src}
                     alt={member.name}
                     fill
+                    sizes="(min-width: 640px) 33vw, 100vw"
                     className="object-cover object-top"
                   />
                 </div>
