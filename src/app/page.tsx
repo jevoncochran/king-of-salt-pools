@@ -69,7 +69,8 @@ export default function Home() {
             Salt System Installation &amp; Pool Conversion
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
-            Turn Your Pool Into a{" "}
+            Turn Your Pool Into a
+            <br />
             <span className="text-gold">Salt Water Pool</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base sm:text-lg text-white/75 leading-relaxed">
