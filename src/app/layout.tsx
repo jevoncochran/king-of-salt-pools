@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} | Saltwater Pool Conversions in ${siteConfig.serviceArea}`,
+    default: `${siteConfig.name} | Salt Water Pool Conversions in ${siteConfig.serviceArea}`,
     template: `%s | ${siteConfig.name}`,
   },
   description:

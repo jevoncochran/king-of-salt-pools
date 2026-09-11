@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { quoteHref, siteConfig } from "@/lib/site-config";
 import Container from "@/components/Container";
+import PageBrand from "@/components/PageBrand";
 import ReviewCard from "@/components/ReviewCard";
 import ServiceArea from "@/components/ServiceArea";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
@@ -63,12 +64,13 @@ export default function Home() {
           }}
         />
         <Container className="relative py-20 sm:py-28">
+          <PageBrand variant="dark" />
           <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
             Salt System Installation &amp; Pool Conversion
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
             Turn Your Pool Into a{" "}
-            <span className="text-gold">Saltwater Pool</span>
+            <span className="text-gold">Salt Water Pool</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base sm:text-lg text-white/75 leading-relaxed">
             Professional salt system installation and pool conversion in the{" "}

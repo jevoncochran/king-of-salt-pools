@@ -2,17 +2,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/Container";
 import ContactForm from "@/components/ContactForm";
+import PageBrand from "@/components/PageBrand";
 
 export const metadata: Metadata = {
   title: "Contact Us & Get a Quote",
   description:
-    "Tell us about your pool and see your personalized saltwater conversion price instantly.",
+    "Tell us about your pool and see your personalized salt water conversion price instantly.",
 };
 
 export default function ContactPage() {
   return (
     <section className="bg-sand py-20">
       <Container>
+        <PageBrand variant="light" />
         <div className="max-w-2xl">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
             Get Your Quote
@@ -31,7 +33,7 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-sm">
             <Image
               src="/assets/images/why-salt/truclear-hero-pool.jpg"
-              alt="A backyard saltwater pool at dusk"
+              alt="A backyard salt water pool at dusk"
               width={960}
               height={1240}
               priority
