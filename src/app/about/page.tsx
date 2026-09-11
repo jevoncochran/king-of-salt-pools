@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
+import PageBrand from "@/components/PageBrand";
+import FamilyVideo from "@/components/FamilyVideo";
 import { quoteHref, siteConfig } from "@/lib/site-config";
 import {
   ArrowRightIcon,
@@ -11,18 +13,38 @@ import {
   ShieldCheckIcon,
 } from "@/components/icons";
 
+const familyVideoPlaybackId = "a4BTcRw00mOqsVg00PUsWkBBbBVUx1jJUb9XJOv5hG7ps";
+
+const familyMembers = [
+  {
+    src: "/assets/images/about/nick.jpg",
+    name: "Nick",
+    role: "Owner & Lead Installer",
+  },
+  {
+    src: "/assets/images/about/fernanda.jpg",
+    name: "Fernanda",
+    role: "Co-Founder",
+  },
+  {
+    src: "/assets/images/about/daughter.jpg",
+    name: "The Newest Team Member",
+    role: "Chief Salt Supervisor (in training)",
+  },
+];
+
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Meet the local, family-owned team behind King of Salt Pools and learn why Tampa Bay homeowners trust us with their saltwater pool conversion.",
+    "A family owned business with 25 years of salt water swimming pool experience, serving the Tampa Bay Area as an authorized Jandy installer.",
 };
 
 const credentials = [
   {
     icon: HeartIcon,
-    title: "Family Owned & Operated",
+    title: "25 Years of Experience",
     description:
-      "We're a local family, not a call center. When you call, you're talking to someone who actually cares how your project turns out.",
+      "A family owned business with 25 years of salt water swimming pool experience — when you call, you're talking to someone who's been doing this for decades.",
   },
   {
     icon: ShieldCheckIcon,
@@ -33,13 +55,13 @@ const credentials = [
     icon: AwardIcon,
     title: "Jandy Authorized Installer",
     description:
-      "We're certified to install Jandy salt chlorine generation systems to manufacturer specifications, keeping your equipment warranty intact.",
+      "Every new salt system we install includes a 3-year warranty, backed by our status as an authorized Jandy installer.",
   },
   {
     icon: CheckCircleIcon,
-    title: "Straightforward, No Pressure",
+    title: "Professional & Knowledgeable",
     description:
-      "No upsells, no scare tactics — just an honest recommendation sized to your pool and your budget.",
+      "We're happy to answer all your questions — before and after the installation of your new system.",
   },
 ];
 
@@ -48,41 +70,117 @@ export default function AboutPage() {
     <>
       {/* INTRO */}
       <section className="bg-white py-20">
-        <Container className="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <Container>
+          <PageBrand variant="light" />
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
               About Us
             </p>
             <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
-              A Local Family, Not a Franchise
+              25 Years of Salt Water Pool Experience
             </h1>
             <p className="mt-5 text-base leading-relaxed text-navy/70">
-              {siteConfig.name} is run by a husband-and-wife team with years
-              of hands-on experience in the pool industry — long before we
-              ever put our own name on a truck. We've installed equipment,
-              balanced water chemistry, and helped homeowners solve everyday
-              pool problems for years, and we started this company to bring
-              that same experience directly to Tampa Bay families switching
-              to salt.
+              {siteConfig.name} is a pool service company that specializes in
+              installing salt water chlorinator systems on residential pools
+              throughout the {siteConfig.serviceArea}. Whether your current
+              salt system needs to be replaced or you&rsquo;re converting a
+              traditional chlorine pool to salt water for the first time,
+              we&rsquo;re here for you.
             </p>
             <p className="mt-4 text-base leading-relaxed text-navy/70">
-              We're not a big box outfit passing you between departments.
-              We're the people who show up, do the work, and stand behind it.
+              We&rsquo;re a family owned business with 25 years of salt water
+              swimming pool experience. That experience is why we&rsquo;ve
+              chosen to install the Jandy TruClear® Salt System — the best
+              salt chlorinator on the market today, based on dependability,
+              easy maintenance, and the warranty offered by the manufacturer.
+              We&rsquo;re a licensed, insured, authorized Jandy installer, and
+              every new system we install includes a 3-year warranty.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-navy/70">
+              Professional and knowledgeable, we&rsquo;re happy to answer all
+              your questions — before and after the installation of your new
+              system.
             </p>
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-sm">
             <Image
-              src="/assets/images/about/husband_and_wife_business_parterns.jpeg"
-              alt={`The husband-and-wife team behind ${siteConfig.name}`}
-              width={960}
-              height={1280}
+              src="/assets/images/about/nick-with-tool.jpg"
+              alt={`${siteConfig.name} installing a Jandy TruClear salt system`}
+              width={1200}
+              height={1600}
               priority
               className="h-full w-full object-cover"
             />
           </div>
+          </div>
         </Container>
       </section>
+
+      {/* MEET THE FAMILY */}
+      <section className="bg-sand py-20">
+        <Container>
+          <div className="max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+              Meet the Family
+            </p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+              The people behind {siteConfig.name}
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-navy/70">
+              This is a real family business — Nick handles every
+              installation personally, Fernanda helps keep things running,
+              and their daughter already loves tagging along on the job.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {familyMembers.map((member) => (
+              <div
+                key={member.name}
+                className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm"
+              >
+                <div className="relative aspect-[3/4] w-full overflow-hidden">
+                  <Image
+                    src={member.src}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="font-bold text-navy">{member.name}</h3>
+                  <p className="mt-0.5 text-sm text-navy/60">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* VIDEO */}
+      {familyVideoPlaybackId && (
+        <section className="bg-white py-20">
+          <Container className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+                Straight From the Family
+              </p>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+                Hear why we love what we do
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-navy/70">
+                Even the youngest member of the family knows what King of
+                Salt Pools is all about.
+              </p>
+            </div>
+            <div className="mx-auto w-full max-w-xs">
+              <FamilyVideo playbackId={familyVideoPlaybackId} aspectRatio="9 / 16" />
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* TRUST / CREDENTIALS */}
       <section className="bg-mist py-20">
@@ -126,8 +224,7 @@ export default function AboutPage() {
             Ready to work with a team you can trust?
           </h2>
           <p className="mt-4 max-w-xl mx-auto text-white/70">
-            Let&rsquo;s talk about your pool and get you a straightforward
-            quote.
+            Call today to have your salt water system installed tomorrow!
           </p>
           <Link
             href={quoteHref}

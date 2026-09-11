@@ -181,7 +181,9 @@ export default function ContactForm() {
             required
             placeholder="(555) 555-5555"
             value={formData.phone}
-            onChange={(e) => updateField("phone", formatPhoneNumber(e.target.value))}
+            onChange={(e) =>
+              updateField("phone", formatPhoneNumber(e.target.value))
+            }
             className={inputClasses}
           />
         </div>
@@ -280,7 +282,10 @@ export default function ContactForm() {
             onChange={(e) => updateField("hasSaltSystem", e.target.checked)}
             className="size-4 rounded border-navy/30 text-gold-dark focus:ring-2 focus:ring-gold/30"
           />
-          <label htmlFor="hasSaltSystem" className="text-sm font-semibold text-navy">
+          <label
+            htmlFor="hasSaltSystem"
+            className="text-sm font-semibold text-navy"
+          >
             Check here if you already have a salt system
           </label>
         </div>
@@ -303,7 +308,9 @@ export default function ContactForm() {
             </p>
           )}
           {fileError && (
-            <p className="mt-1.5 text-xs font-semibold text-red-600">{fileError}</p>
+            <p className="mt-1.5 text-xs font-semibold text-red-600">
+              {fileError}
+            </p>
           )}
         </div>
       </div>

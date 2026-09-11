@@ -11,7 +11,7 @@ export default function ServiceArea() {
           </p>
         </div>
         <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
-          Bringing Saltwater to Pools Across the Tampa Bay
+          Bringing Salt Water to Pools Across the Tampa Bay
         </h2>
         <p className="mt-4 max-w-md text-sm leading-relaxed text-navy/70">
           Wherever your pool sits in the bay area, our crew can get a salt

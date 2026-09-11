@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
+import PageBrand from "@/components/PageBrand";
 import { quoteHref } from "@/lib/site-config";
 import {
   ArrowRightIcon,
@@ -19,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "Why Salt?",
   description:
-    "Discover the benefits of switching to a saltwater pool with King of Salt Pools — softer water, fewer chemicals, and simple, reliable equipment we stand behind.",
+    "Discover the benefits of switching to a salt water pool with King of Salt Pools — softer water, fewer chemicals, and simple, reliable equipment we stand behind.",
 };
 
 const coreBenefits = [
@@ -88,18 +89,19 @@ export default function WhySaltPage() {
       <section className="relative overflow-hidden bg-navy">
         <Image
           src="/assets/images/why-salt/truclear-hero-pool.jpg"
-          alt="Saltwater pool with a Jandy TruClear salt chlorinator installed poolside"
+          alt="Salt water pool with a Jandy TruClear salt chlorinator installed poolside"
           fill
           priority
           className="object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40" />
         <Container className="relative py-20 sm:py-28">
+          <PageBrand variant="dark" />
           <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
             Why Salt?
           </p>
           <h1 className="mt-4 max-w-2xl text-4xl sm:text-5xl font-extrabold leading-tight text-white">
-            The Benefits of a Saltwater Pool
+            The Benefits of a Salt Water Pool
           </h1>
           <p className="mt-6 max-w-xl text-base sm:text-lg text-white/75 leading-relaxed">
             Softer water, fewer chemicals, and a pool that&rsquo;s simply

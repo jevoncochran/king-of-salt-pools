@@ -2,7 +2,9 @@ export const siteConfig = {
   name: "King of Salt Pools",
   tagline: "The Royal Way to Sanitize Your Pool",
   serviceArea: "Tampa Bay Area",
-  phone: "(855) 520-7665",
+  // Display uses the POOL vanity spelling (7665 on a phone keypad);
+  // phoneHref keeps the real digits since tel: links need numbers, not letters.
+  phone: "(855) 520-POOL",
   phoneHref: "tel:+18555207665",
   email: "kingofsaltpoolsfl@gmail.com",
   // TODO: confirm real business hours with the client.
