@@ -51,10 +51,10 @@ export default function Header() {
             <Image
               src="/assets/images/shared/logo.png"
               alt={siteConfig.name}
-              width={220}
-              height={56}
+              width={260}
+              height={66}
               priority
-              style={{ height: "3.25rem", width: "auto" }}
+              style={{ height: "4rem", width: "auto" }}
             />
           </Link>
 
