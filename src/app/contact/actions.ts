@@ -74,7 +74,8 @@ export async function submitQuoteRequest(data: QuoteRequest) {
 
   const { error } = await resend.emails.send({
     from: `${siteConfig.name} Website <onboarding@resend.dev>`,
-    to: siteConfig.email,
+    // to: siteConfig.email,
+    to: "jevon@interconvisuals.com",
     replyTo: data.email,
     subject: `New Quote Request from ${fullName}`,
     html,
