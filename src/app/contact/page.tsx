@@ -32,10 +32,10 @@ export default function ContactPage() {
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:items-start">
           <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-sm">
             <Image
-              src="/assets/images/why-salt/truclear-hero-pool.jpg"
-              alt="A backyard salt water pool at dusk"
-              width={960}
-              height={1240}
+              src="/assets/images/contact/kids_in_pool.jpg"
+              alt="Kids enjoying a swim in the pool"
+              width={1600}
+              height={1200}
               priority
               className="h-full w-full object-cover"
             />
