@@ -33,7 +33,7 @@ function row(label: string, value: string) {
 }
 
 export async function submitQuoteRequest(data: QuoteRequest) {
-  if (!data.firstName.trim() || !data.phone.trim() || !data.email.trim()) {
+  if (!data.firstName.trim() || (!data.phone.trim() && !data.email.trim())) {
     throw new Error("Missing required fields");
   }
 
@@ -76,7 +76,7 @@ export async function submitQuoteRequest(data: QuoteRequest) {
     from: `${siteConfig.name} Website <onboarding@resend.dev>`,
     // to: siteConfig.email,
     to: "jevon@interconvisuals.com",
-    replyTo: data.email,
+    ...(data.email.trim() ? { replyTo: data.email } : {}),
     subject: `New Quote Request from ${fullName}`,
     html,
     attachments,

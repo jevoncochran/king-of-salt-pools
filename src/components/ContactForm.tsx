@@ -11,6 +11,7 @@ import {
 import { siteConfig } from "@/lib/site-config";
 import { formatPhoneNumber } from "@/lib/format";
 import { ArrowRightIcon, CheckCircleIcon } from "@/components/icons";
+import Toast from "@/components/Toast";
 
 const initialFormData = {
   firstName: "",
@@ -43,6 +44,7 @@ export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const [fileError, setFileError] = useState<string | null>(null);
+  const [contactMethodError, setContactMethodError] = useState(false);
 
   function updateField<K extends keyof FormData>(field: K, value: FormData[K]) {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -67,6 +69,12 @@ export default function ContactForm() {
       form.reportValidity();
       return;
     }
+
+    if (!formData.phone.trim() && !formData.email.trim()) {
+      setContactMethodError(true);
+      return;
+    }
+    setContactMethodError(false);
 
     setSubmitting(true);
     setSubmitError(false);
@@ -114,7 +122,8 @@ export default function ContactForm() {
             </p>
           )}
           <p className="mt-2 text-navy/60">
-            We&rsquo;ll reach you at {formData.phone} or {formData.email}.
+            We&rsquo;ll reach you at{" "}
+            {[formData.phone, formData.email].filter(Boolean).join(" or ")}.
           </p>
         </div>
 
@@ -136,11 +145,18 @@ export default function ContactForm() {
   }
 
   return (
-    <form
-      noValidate
-      onSubmit={handleSubmit}
-      className="rounded-2xl border border-navy/10 bg-white p-8"
-    >
+    <>
+      {contactMethodError && (
+        <Toast
+          message="You must provide either your phone number or your email to proceed"
+          onDismiss={() => setContactMethodError(false)}
+        />
+      )}
+      <form
+        noValidate
+        onSubmit={handleSubmit}
+        className="rounded-2xl border border-navy/10 bg-white p-8"
+      >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="firstName" className={labelClasses}>
@@ -172,32 +188,34 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="phone" className={labelClasses}>
-            Phone Number<span className="text-gold-dark">*</span>
+            Phone Number
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
-            required
             placeholder="(555) 555-5555"
             value={formData.phone}
-            onChange={(e) =>
-              updateField("phone", formatPhoneNumber(e.target.value))
-            }
+            onChange={(e) => {
+              updateField("phone", formatPhoneNumber(e.target.value));
+              setContactMethodError(false);
+            }}
             className={inputClasses}
           />
         </div>
         <div>
           <label htmlFor="email" className={labelClasses}>
-            Email<span className="text-gold-dark">*</span>
+            Email
           </label>
           <input
             id="email"
             name="email"
             type="email"
-            required
             value={formData.email}
-            onChange={(e) => updateField("email", e.target.value)}
+            onChange={(e) => {
+              updateField("email", e.target.value);
+              setContactMethodError(false);
+            }}
             className={inputClasses}
           />
         </div>
@@ -379,8 +397,10 @@ export default function ContactForm() {
         {!submitting && <ArrowRightIcon className="size-4" />}
       </button>
       <p className="mt-3 text-center text-xs text-navy/50">
-        *Indicates a required field.
+        *Indicates a required field. Please also provide a phone number or
+        an email address.
       </p>
-    </form>
+      </form>
+    </>
   );
 }
