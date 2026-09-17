@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { quoteHref, siteConfig } from "@/lib/site-config";
 import Container from "@/components/Container";
@@ -5,7 +6,10 @@ import PageBrand from "@/components/PageBrand";
 import ReviewCard from "@/components/ReviewCard";
 import ServiceArea from "@/components/ServiceArea";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
-import { jandyReviewSummary, jandyTruclearReviews } from "@/lib/jandy-truclear-reviews";
+import {
+  jandyReviewSummary,
+  jandyTruclearReviews,
+} from "@/lib/jandy-truclear-reviews";
 import {
   ArrowRightIcon,
   CheckCircleIcon,
@@ -55,14 +59,14 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-navy">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 15% 20%, rgba(31,182,201,0.35), transparent 40%), radial-gradient(circle at 85% 0%, rgba(235,171,30,0.25), transparent 45%), radial-gradient(circle at 50% 100%, rgba(31,182,201,0.25), transparent 50%)",
-          }}
+        <Image
+          src="/assets/images/home/backyard-pool-hero.jpg"
+          alt="A backyard salt water pool surrounded by palm trees"
+          fill
+          priority
+          className="object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/65 to-navy/15" />
         <Container className="relative py-20 sm:py-28">
           <PageBrand variant="dark" />
           <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
@@ -98,7 +102,10 @@ export default function Home() {
 
           <ul className="mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-x-8 gap-y-3">
             {heroTrustBullets.map((item) => (
-              <li key={item} className="flex items-center gap-2 text-sm text-white/85">
+              <li
+                key={item}
+                className="flex items-center gap-2 text-sm text-white/85"
+              >
                 <ShieldCheckIcon className="size-5 text-gold shrink-0" />
                 {item}
               </li>
@@ -119,17 +126,17 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map(({ icon: Icon, title, description }) => (
+          <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-navy/10">
+            {benefits.map(({ icon: Icon, title, description }, i) => (
               <div
                 key={title}
-                className="rounded-xl border border-navy/10 bg-sand p-6 hover:border-gold/50 transition-colors"
+                className={`text-center ${i > 0 ? "lg:px-6" : "lg:pr-6"}`}
               >
-                <div className="flex size-11 items-center justify-center rounded-full bg-gold/15 text-gold-dark">
-                  <Icon className="size-6" />
+                <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-sand text-navy">
+                  <Icon className="size-7" />
                 </div>
                 <h3 className="mt-4 text-lg font-bold text-navy">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-navy/70">
+                <p className="mt-2 text-sm leading-relaxed text-navy/60">
                   {description}
                 </p>
               </div>
@@ -157,8 +164,8 @@ export default function Home() {
               See a Salt System in Action
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              Take a quick look at how a salt system works and what it takes
-              to get your pool converted.
+              Take a quick look at how a salt system works and what it takes to
+              get your pool converted.
             </p>
           </div>
           <div className="mt-10 max-w-3xl mx-auto">
@@ -219,7 +226,9 @@ export default function Home() {
               Real Reviews
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
-              Salt pool owners <span className="font-accent italic text-gold-dark">love</span> their results
+              Salt pool owners{" "}
+              <span className="font-accent italic text-gold-dark">love</span>{" "}
+              their results
             </h2>
             <div className="mt-4 flex items-center justify-center gap-2 text-sm text-navy/70">
               <div className="flex gap-0.5 text-gold">
@@ -227,13 +236,17 @@ export default function Home() {
                   <StarIcon key={i} className="size-4" />
                 ))}
               </div>
-              <span className="font-bold text-navy">{jandyReviewSummary.averageRating}</span>
-              <span>average across {jandyReviewSummary.totalReviews} reviews</span>
+              <span className="font-bold text-navy">
+                {jandyReviewSummary.averageRating}
+              </span>
+              <span>
+                average across {jandyReviewSummary.totalReviews} reviews
+              </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-navy/60">
               We stand behind the equipment we install. Here&rsquo;s what real
-              owners of this system (Jandy TruClear®) have to say, straight
-              from the manufacturer&rsquo;s own site.
+              owners of this system (Jandy TruClear®) have to say, straight from
+              the manufacturer&rsquo;s own site.
             </p>
           </div>
 
@@ -266,20 +279,30 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="bg-navy">
-        <Container className="py-16 text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Ready to make the switch?
-          </h2>
-          <p className="mt-4 max-w-xl mx-auto text-white/70">
-            You already own the pool. Now upgrade the way you enjoy it!
-          </p>
-          <Link
-            href={quoteHref}
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
-          >
-            Get Your Quote Now
-            <ArrowRightIcon className="size-4" />
-          </Link>
+        <Container className="grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:gap-16">
+          <div className="relative h-72 overflow-hidden rounded-2xl sm:h-96 lg:h-[420px]">
+            <Image
+              src="/assets/images/home/woman-poolside-hat.jpg"
+              alt="Woman relaxing poolside in a sun hat"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+          <div className="text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+              Ready to make the switch?
+            </h2>
+            <p className="mt-4 max-w-xl mx-auto text-white/70 lg:mx-0">
+              You already own the pool. Now upgrade the way you enjoy it!
+            </p>
+            <Link
+              href={quoteHref}
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
+            >
+              Get Your Quote Now
+              <ArrowRightIcon className="size-4" />
+            </Link>
+          </div>
         </Container>
       </section>
     </>

@@ -2,19 +2,22 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #261e35;
+  --foreground: #1b3a63;
 
-  /* Brand colors sampled from the King of Salt Pools logo */
-  --color-brand-navy: #261e35;
-  --color-brand-navy-light: #3a2e4f;
+  /* Brand navy — lightened and pushed further toward blue (an earlier,
+     darker pass was reading as purple at low lightness) per client feedback. */
+  --color-brand-navy: #1b3a63;
+  --color-brand-navy-light: #2e4f80;
   --color-brand-gold: #ebab1e;
   --color-brand-gold-light: #f5c04d;
   --color-brand-gold-dark: #c68d12;
 
   /* Supporting pool-water accent, not from the logo */
   --color-brand-aqua: #1fb6c9;
-  --color-brand-mist: #eefcfb;
-  --color-brand-sand: #f7f4ee;
+  /* Cool light blue-gray neutrals for alternating section backgrounds,
+     replacing the previous warm cream/aqua tint. */
+  --color-brand-mist: #f4f7fb;
+  --color-brand-sand: #eef2f7;
 }
 
 @theme inline {

@@ -28,13 +28,13 @@ const familyMembers = [
   },
   {
     src: "/assets/images/about/daughter.jpg",
-    name: "The Littlest Team Member",
+    name: "Charlie",
     role: "Chief Salt Supervisor (in training)",
   },
   {
     src: "/assets/images/about/daughter-2.jpg",
-    name: "The Newest Team Member",
-    role: "Team Member",
+    name: "Sophie",
+    role: "Marketing Superstar",
   },
 ];
 
@@ -78,47 +78,47 @@ export default function AboutPage() {
         <Container>
           <PageBrand variant="light" />
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              About Us
-            </p>
-            <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
-              25 Years of Salt Water Pool Experience
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-navy/70">
-              {siteConfig.name} is a pool service company that specializes in
-              installing salt water chlorinator systems on residential pools
-              throughout the {siteConfig.serviceArea}. Whether your current
-              salt system needs to be replaced or you&rsquo;re converting a
-              traditional chlorine pool to salt water for the first time,
-              we&rsquo;re here for you.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-navy/70">
-              We&rsquo;re a family owned business with 25 years of salt water
-              swimming pool experience. That experience is why we&rsquo;ve
-              chosen to install the Jandy TruClear® Salt System — the best
-              salt chlorinator on the market today, based on dependability,
-              easy maintenance, and the warranty offered by the manufacturer.
-              We&rsquo;re a licensed, insured, authorized Jandy installer, and
-              every new system we install includes a 3-year warranty.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-navy/70">
-              Professional and knowledgeable, we&rsquo;re happy to answer all
-              your questions — before and after the installation of your new
-              system.
-            </p>
-          </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+                About Us
+              </p>
+              <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+                25 Years of Salt Water Pool Experience
+              </h1>
+              <p className="mt-5 text-base leading-relaxed text-navy/70">
+                {siteConfig.name} is a pool service company that specializes in
+                installing salt water chlorinator systems on residential pools
+                throughout the {siteConfig.serviceArea}. Whether your current
+                salt system needs to be replaced or you&rsquo;re converting a
+                traditional chlorine pool to salt water for the first time,
+                we&rsquo;re here for you.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-navy/70">
+                We&rsquo;re a family owned business with 25 years of salt water
+                swimming pool experience. That experience is why we&rsquo;ve
+                chosen to install the Jandy TruClear® Salt System — the best
+                salt chlorinator on the market today, based on dependability,
+                easy maintenance, and the warranty offered by the manufacturer.
+                We&rsquo;re a licensed, insured, authorized Jandy installer, and
+                every new system we install includes a 3-year warranty.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-navy/70">
+                Professional and knowledgeable, we&rsquo;re happy to answer all
+                your questions — before and after the installation of your new
+                system.
+              </p>
+            </div>
 
-          <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-sm">
-            <Image
-              src="/assets/images/about/nick-with-tool.jpg"
-              alt={`${siteConfig.name} installing a Jandy TruClear salt system`}
-              width={1200}
-              height={1600}
-              priority
-              className="h-full w-full object-cover"
-            />
-          </div>
+            <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-sm">
+              <Image
+                src="/assets/images/about/nick-with-tool.jpg"
+                alt={`${siteConfig.name} installing a Jandy TruClear salt system`}
+                width={1200}
+                height={1600}
+                priority
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </Container>
       </section>
@@ -134,9 +134,9 @@ export default function AboutPage() {
               The people behind {siteConfig.name}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              This is a real family business — Nick handles every
-              installation personally, Fernanda helps keep things running,
-              and their daughters love tagging along on the job.
+              This is a real family business — Nick handles every installation
+              personally, Fernanda helps keep things running, and their
+              daughters love tagging along on the job.
             </p>
           </div>
 
@@ -177,12 +177,15 @@ export default function AboutPage() {
                 Hear why we love what we do
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-navy/70">
-                Even the youngest member of the family knows what King of
-                Salt Pools is all about.
+                Even the youngest member of the family knows what King of Salt
+                Pools is all about.
               </p>
             </div>
             <div className="mx-auto w-full max-w-xs">
-              <FamilyVideo playbackId={familyVideoPlaybackId} aspectRatio="9 / 16" />
+              <FamilyVideo
+                playbackId={familyVideoPlaybackId}
+                aspectRatio="9 / 16"
+              />
             </div>
           </Container>
         </section>
