@@ -16,9 +16,9 @@ export default function PageBrand({
         <Image
           src="/assets/images/shared/logo.png"
           alt={siteConfig.name}
-          width={220}
-          height={56}
-          style={{ height: "3.25rem", width: "auto" }}
+          width={440}
+          height={112}
+          style={{ height: "6.5rem", width: "auto" }}
           className={isDark ? "brightness-0 invert" : undefined}
         />
       </Link>
