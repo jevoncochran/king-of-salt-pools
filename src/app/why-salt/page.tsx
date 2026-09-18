@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
 import PageBrand from "@/components/PageBrand";
-import { quoteHref } from "@/lib/site-config";
+import { quoteButtonLabel, quoteHref } from "@/lib/site-config";
 import {
   ArrowRightIcon,
   BoltIcon,
@@ -112,7 +112,7 @@ export default function WhySaltPage() {
             href={quoteHref}
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
           >
-            Get Your Quote Now
+            {quoteButtonLabel}
             <ArrowRightIcon className="size-4" />
           </Link>
         </Container>
@@ -286,7 +286,7 @@ export default function WhySaltPage() {
             href={quoteHref}
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
           >
-            Get Your Quote Now
+            {quoteButtonLabel}
             <ArrowRightIcon className="size-4" />
           </Link>
         </Container>

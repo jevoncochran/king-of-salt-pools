@@ -4,7 +4,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import PageBrand from "@/components/PageBrand";
 import FamilyVideo from "@/components/FamilyVideo";
-import { quoteHref, siteConfig } from "@/lib/site-config";
+import { quoteButtonLabel, quoteHref, siteConfig } from "@/lib/site-config";
 import {
   ArrowRightIcon,
   AwardIcon,
@@ -134,8 +134,8 @@ export default function AboutPage() {
               The people behind {siteConfig.name}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              This is a real family business — Nick handles every installation
-              personally, Fernanda helps keep things running, and their
+              A real family business — Nick personally manages every
+              installation, Fernanda keeps the business running, and their
               daughters love tagging along on the job.
             </p>
           </div>
@@ -201,9 +201,9 @@ export default function AboutPage() {
             <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
               Trust isn&rsquo;t a tagline for us
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              Letting a stranger into your backyard to work on expensive
-              equipment takes trust. Here&rsquo;s what backs it up.
+            <p className="mt-4 text-sm leading-relaxed text-navy/70 lg:whitespace-nowrap">
+              Choosing who you trust with your pool and equipment matters.
+              Here’s why homeowners feel confident choosing King of Salt Pools.
             </p>
           </div>
 
@@ -239,7 +239,7 @@ export default function AboutPage() {
             href={quoteHref}
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
           >
-            Get Your Quote Now
+            {quoteButtonLabel}
             <ArrowRightIcon className="size-4" />
           </Link>
         </Container>

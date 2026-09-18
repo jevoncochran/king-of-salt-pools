@@ -3,7 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { navLinks, quoteHref, siteConfig } from "@/lib/site-config";
+import {
+  navLinks,
+  quoteButtonLabel,
+  quoteHref,
+  siteConfig,
+} from "@/lib/site-config";
 import {
   MailIcon,
   MenuIcon,
@@ -46,7 +51,7 @@ export default function Header() {
 
       {/* Main nav */}
       <div className="bg-white border-b border-navy/10">
-        <Container className="h-20 flex items-center justify-between gap-4">
+        <Container className="h-24 flex items-center justify-between gap-4">
           <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
             <Image
               src="/assets/images/shared/logo.png"
@@ -54,7 +59,7 @@ export default function Header() {
               width={260}
               height={66}
               priority
-              style={{ height: "4rem", width: "auto" }}
+              style={{ height: "5rem", width: "auto" }}
             />
           </Link>
 
@@ -75,7 +80,7 @@ export default function Header() {
               href={quoteHref}
               className="inline-flex items-center rounded-md bg-gold px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
             >
-              Get a Free Quote
+              {quoteButtonLabel}
             </Link>
           </div>
 
@@ -111,7 +116,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-md bg-gold px-5 py-3 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
             >
-              Get a Free Quote
+              {quoteButtonLabel}
             </Link>
           </nav>
         )}
