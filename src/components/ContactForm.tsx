@@ -102,7 +102,7 @@ export default function ContactForm() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-light">
             Estimated Installation Price
           </p>
-          <p className="mt-2 text-5xl font-extrabold text-white">$3,599</p>
+          <p className="mt-2 text-5xl font-extrabold text-white">$2,599</p>
         </div>
 
         <div className="mt-6 rounded-lg border border-navy/10 bg-sand p-4 text-sm text-navy/80">
@@ -157,249 +157,249 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
         className="rounded-2xl border border-navy/10 bg-white p-8"
       >
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label htmlFor="firstName" className={labelClasses}>
-            First Name<span className="text-gold-dark">*</span>
-          </label>
-          <input
-            id="firstName"
-            name="firstName"
-            type="text"
-            required
-            value={formData.firstName}
-            onChange={(e) => updateField("firstName", e.target.value)}
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="lastName" className={labelClasses}>
-            Last Name
-          </label>
-          <input
-            id="lastName"
-            name="lastName"
-            type="text"
-            value={formData.lastName}
-            onChange={(e) => updateField("lastName", e.target.value)}
-            className={inputClasses}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="phone" className={labelClasses}>
-            Phone Number
-          </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            placeholder="(555) 555-5555"
-            value={formData.phone}
-            onChange={(e) => {
-              updateField("phone", formatPhoneNumber(e.target.value));
-              setContactMethodError(false);
-            }}
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className={labelClasses}>
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={(e) => {
-              updateField("email", e.target.value);
-              setContactMethodError(false);
-            }}
-            className={inputClasses}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="streetAddress" className={labelClasses}>
-            Street Address
-          </label>
-          <input
-            id="streetAddress"
-            name="streetAddress"
-            type="text"
-            value={formData.streetAddress}
-            onChange={(e) => updateField("streetAddress", e.target.value)}
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="city" className={labelClasses}>
-            City
-          </label>
-          <input
-            id="city"
-            name="city"
-            type="text"
-            value={formData.city}
-            onChange={(e) => updateField("city", e.target.value)}
-            className={inputClasses}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="howHeard" className={labelClasses}>
-            How did you hear about us?
-          </label>
-          <select
-            id="howHeard"
-            name="howHeard"
-            value={formData.howHeard}
-            onChange={(e) => updateField("howHeard", e.target.value)}
-            className={inputClasses}
-          >
-            <option value="">Select an option</option>
-            {howHeardOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label htmlFor="poolSize" className={labelClasses}>
-            How big is your pool?
-          </label>
-          <select
-            id="poolSize"
-            name="poolSize"
-            value={formData.poolSize}
-            onChange={(e) => updateField("poolSize", e.target.value)}
-            className={inputClasses}
-          >
-            <option value="">Select an option</option>
-            {poolSizeOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      <div className="mt-8 border-t border-navy/10 pt-6">
-        <p className={labelClasses}>About Your Pool</p>
-
-        <div className="mt-3 flex items-center gap-2.5">
-          <input
-            id="hasSaltSystem"
-            name="hasSaltSystem"
-            type="checkbox"
-            checked={formData.hasSaltSystem}
-            onChange={(e) => updateField("hasSaltSystem", e.target.checked)}
-            className="size-4 rounded border-navy/30 text-gold-dark focus:ring-2 focus:ring-gold/30"
-          />
-          <label
-            htmlFor="hasSaltSystem"
-            className="text-sm font-semibold text-navy"
-          >
-            Check here if you already have a salt system
-          </label>
-        </div>
-
-        <div className="mt-5">
-          <label htmlFor="poolPhoto" className={labelClasses}>
-            Upload a Photo of Your Pool
-          </label>
-          <input
-            id="poolPhoto"
-            name="poolPhoto"
-            type="file"
-            accept="image/*"
-            onChange={handlePhotoChange}
-            className={fileInputClasses}
-          />
-          {formData.poolPhoto && !fileError && (
-            <p className="mt-1.5 text-xs text-navy/50">
-              Selected: {formData.poolPhoto.name}
-            </p>
-          )}
-          {fileError && (
-            <p className="mt-1.5 text-xs font-semibold text-red-600">
-              {fileError}
-            </p>
-          )}
-        </div>
-      </div>
-
-      <div className="mt-8 border-t border-navy/10 pt-6">
-        <p className={labelClasses}>Best Time to Reach You</p>
-        <p className="text-xs text-navy/50 mb-3">
-          Optional — {siteConfig.name} can call Monday through Saturday, 8:00 AM
-          to 5:00 PM.
-        </p>
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label htmlFor="preferredDay" className="sr-only">
-              Preferred Day
+            <label htmlFor="firstName" className={labelClasses}>
+              First Name<span className="text-gold-dark">*</span>
+            </label>
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              required
+              value={formData.firstName}
+              onChange={(e) => updateField("firstName", e.target.value)}
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="lastName" className={labelClasses}>
+              Last Name
+            </label>
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              value={formData.lastName}
+              onChange={(e) => updateField("lastName", e.target.value)}
+              className={inputClasses}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="phone" className={labelClasses}>
+              Phone Number
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="(555) 555-5555"
+              value={formData.phone}
+              onChange={(e) => {
+                updateField("phone", formatPhoneNumber(e.target.value));
+                setContactMethodError(false);
+              }}
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className={labelClasses}>
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => {
+                updateField("email", e.target.value);
+                setContactMethodError(false);
+              }}
+              className={inputClasses}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="streetAddress" className={labelClasses}>
+              Street Address
+            </label>
+            <input
+              id="streetAddress"
+              name="streetAddress"
+              type="text"
+              value={formData.streetAddress}
+              onChange={(e) => updateField("streetAddress", e.target.value)}
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="city" className={labelClasses}>
+              City
+            </label>
+            <input
+              id="city"
+              name="city"
+              type="text"
+              value={formData.city}
+              onChange={(e) => updateField("city", e.target.value)}
+              className={inputClasses}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="howHeard" className={labelClasses}>
+              How did you hear about us?
             </label>
             <select
-              id="preferredDay"
-              name="preferredDay"
-              value={formData.preferredDay}
-              onChange={(e) => updateField("preferredDay", e.target.value)}
+              id="howHeard"
+              name="howHeard"
+              value={formData.howHeard}
+              onChange={(e) => updateField("howHeard", e.target.value)}
               className={inputClasses}
             >
-              <option value="">Any day</option>
-              {contactDays.map((day) => (
-                <option key={day} value={day}>
-                  {day}
+              <option value="">Select an option</option>
+              {howHeardOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
                 </option>
               ))}
             </select>
           </div>
+
           <div>
-            <label htmlFor="preferredTime" className="sr-only">
-              Preferred Time
+            <label htmlFor="poolSize" className={labelClasses}>
+              How big is your pool?
             </label>
             <select
-              id="preferredTime"
-              name="preferredTime"
-              value={formData.preferredTime}
-              onChange={(e) => updateField("preferredTime", e.target.value)}
+              id="poolSize"
+              name="poolSize"
+              value={formData.poolSize}
+              onChange={(e) => updateField("poolSize", e.target.value)}
               className={inputClasses}
             >
-              <option value="">Any time</option>
-              {contactTimeSlots.map((slot) => (
-                <option key={slot} value={slot}>
-                  {slot}
+              <option value="">Select an option</option>
+              {poolSizeOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
                 </option>
               ))}
             </select>
           </div>
         </div>
-      </div>
 
-      {submitError && (
-        <p className="mt-6 text-sm font-semibold text-red-600">
-          Something went wrong submitting your request. Please try again or call
-          us at {siteConfig.phone}.
+        <div className="mt-8 border-t border-navy/10 pt-6">
+          <p className={labelClasses}>About Your Pool</p>
+
+          <div className="mt-3 flex items-center gap-2.5">
+            <input
+              id="hasSaltSystem"
+              name="hasSaltSystem"
+              type="checkbox"
+              checked={formData.hasSaltSystem}
+              onChange={(e) => updateField("hasSaltSystem", e.target.checked)}
+              className="size-4 rounded border-navy/30 text-gold-dark focus:ring-2 focus:ring-gold/30"
+            />
+            <label
+              htmlFor="hasSaltSystem"
+              className="text-sm font-semibold text-navy"
+            >
+              Check here if you already have a salt system
+            </label>
+          </div>
+
+          <div className="mt-5">
+            <label htmlFor="poolPhoto" className={labelClasses}>
+              Upload a Photo of Your Pool
+            </label>
+            <input
+              id="poolPhoto"
+              name="poolPhoto"
+              type="file"
+              accept="image/*"
+              onChange={handlePhotoChange}
+              className={fileInputClasses}
+            />
+            {formData.poolPhoto && !fileError && (
+              <p className="mt-1.5 text-xs text-navy/50">
+                Selected: {formData.poolPhoto.name}
+              </p>
+            )}
+            {fileError && (
+              <p className="mt-1.5 text-xs font-semibold text-red-600">
+                {fileError}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-navy/10 pt-6">
+          <p className={labelClasses}>Best Time to Reach You</p>
+          <p className="text-xs text-navy/50 mb-3">
+            Optional — {siteConfig.name} can call Monday through Saturday, 8:00
+            AM to 5:00 PM.
+          </p>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label htmlFor="preferredDay" className="sr-only">
+                Preferred Day
+              </label>
+              <select
+                id="preferredDay"
+                name="preferredDay"
+                value={formData.preferredDay}
+                onChange={(e) => updateField("preferredDay", e.target.value)}
+                className={inputClasses}
+              >
+                <option value="">Any day</option>
+                {contactDays.map((day) => (
+                  <option key={day} value={day}>
+                    {day}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="preferredTime" className="sr-only">
+                Preferred Time
+              </label>
+              <select
+                id="preferredTime"
+                name="preferredTime"
+                value={formData.preferredTime}
+                onChange={(e) => updateField("preferredTime", e.target.value)}
+                className={inputClasses}
+              >
+                <option value="">Any time</option>
+                {contactTimeSlots.map((slot) => (
+                  <option key={slot} value={slot}>
+                    {slot}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {submitError && (
+          <p className="mt-6 text-sm font-semibold text-red-600">
+            Something went wrong submitting your request. Please try again or
+            call us at {siteConfig.phone}.
+          </p>
+        )}
+
+        <button
+          type="submit"
+          disabled={submitting}
+          className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors disabled:opacity-60"
+        >
+          {submitting ? "Submitting..." : "See My Price"}
+          {!submitting && <ArrowRightIcon className="size-4" />}
+        </button>
+        <p className="mt-3 text-center text-xs text-navy/50">
+          *Indicates a required field. Please also provide a phone number or an
+          email address.
         </p>
-      )}
-
-      <button
-        type="submit"
-        disabled={submitting}
-        className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors disabled:opacity-60"
-      >
-        {submitting ? "Submitting..." : "See My Price"}
-        {!submitting && <ArrowRightIcon className="size-4" />}
-      </button>
-      <p className="mt-3 text-center text-xs text-navy/50">
-        *Indicates a required field. Please also provide a phone number or
-        an email address.
-      </p>
       </form>
     </>
   );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { quoteHref, siteConfig } from "@/lib/site-config";
+import { quoteButtonLabel, quoteHref, siteConfig } from "@/lib/site-config";
 import Container from "@/components/Container";
 import PageBrand from "@/components/PageBrand";
 import ReviewCard from "@/components/ReviewCard";
@@ -68,14 +68,14 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/65 to-navy/15" />
         <Container className="relative py-20 sm:py-28">
-          <PageBrand variant="dark" />
+          <PageBrand variant="light" />
           <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
             Salt System Installation &amp; Pool Conversion
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
-            Turn Your Pool Into a
+            Turn Your Pool Into
             <br />
-            <span className="text-gold">Salt Water Pool</span>
+            <span className="text-gold">A Salt Water Pool</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base sm:text-lg text-white/75 leading-relaxed">
             Professional salt system installation and pool conversion in the{" "}
@@ -89,7 +89,7 @@ export default function Home() {
               href={quoteHref}
               className="inline-flex items-center justify-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
             >
-              Get Your Quote Now
+              {quoteButtonLabel}
               <ArrowRightIcon className="size-4" />
             </Link>
             <Link
@@ -281,9 +281,10 @@ export default function Home() {
       <section className="bg-navy">
         <Container className="grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="relative h-72 overflow-hidden rounded-2xl sm:h-96 lg:h-[420px]">
+            {/* TODO: The alt needs to be filled out here */}
             <Image
-              src="/assets/images/home/woman-poolside-hat.jpg"
-              alt="Woman relaxing poolside in a sun hat"
+              src="/assets/images/about/product.jpg"
+              alt=""
               fill
               className="object-cover object-top"
             />
@@ -299,7 +300,7 @@ export default function Home() {
               href={quoteHref}
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
             >
-              Get Your Quote Now
+              {quoteButtonLabel}
               <ArrowRightIcon className="size-4" />
             </Link>
           </div>

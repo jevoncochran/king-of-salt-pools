@@ -20,6 +20,7 @@ export const navLinks = [
 ] as const;
 
 export const quoteHref = "/contact";
+export const quoteButtonLabel = "GET A FREE QUOTE";
 
 // TODO: confirm the exact service area / city list with the client.
 export const serviceAreaCities = [
