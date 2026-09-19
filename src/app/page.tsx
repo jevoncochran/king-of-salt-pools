@@ -280,13 +280,13 @@ export default function Home() {
       {/* FINAL CTA */}
       <section className="bg-navy">
         <Container className="grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div className="relative h-72 overflow-hidden rounded-2xl sm:h-96 lg:h-[420px]">
+          <div className="relative aspect-[3/4] w-full max-w-xs mx-auto overflow-hidden rounded-2xl lg:mx-0">
             {/* TODO: The alt needs to be filled out here */}
             <Image
               src="/assets/images/about/product.jpg"
               alt=""
               fill
-              className="object-cover object-top"
+              className="object-cover"
             />
           </div>
           <div className="text-center lg:text-left">
