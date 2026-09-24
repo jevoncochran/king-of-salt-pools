@@ -60,7 +60,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-navy">
         <Image
-          src="/assets/images/home/backyard-pool-hero.jpg"
+          src="/assets/images/home/pool.jpg"
           alt="A backyard salt water pool surrounded by palm trees"
           fill
           priority
