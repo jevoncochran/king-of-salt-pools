@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Button from "@/components/Button";
 import Container from "@/components/Container";
-import PageBrand from "@/components/PageBrand";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircleIcon, DownloadIcon, XIcon } from "@/components/icons";
 
@@ -14,7 +14,10 @@ const jandyWarrantyPdfUrl =
   "https://cdn.fluidrausa.com/-/media/zodiac/global/downloads/corporate/limited-warranty/jandy-limited-warranty-h0333803-rev-ab.pdf?rev=3e380ae9c5d34e7cb8fb322894bdfd8a";
 
 const coveragePeriods = [
-  { item: "Most Jandy® branded products (standard coverage)", duration: "1 year" },
+  {
+    item: "Most Jandy® branded products (standard coverage)",
+    duration: "1 year",
+  },
   {
     item: "Complete electronic salt water chlorine systems (controller & cell purchased and installed together) and complete AOP systems",
     duration: "3 years",
@@ -28,15 +31,24 @@ const coveragePeriods = [
     item: "JXi gas heater exchangers with factory-installed VersaFlo™ Integrated Bypass",
     duration: "5 years",
   },
-  { item: "Never Lube® valves made from CPVC", duration: "Life of the pool originally installed on" },
+  {
+    item: "Never Lube® valves made from CPVC",
+    duration: "Life of the pool originally installed on",
+  },
   { item: "Never Lube® valves made from PVC", duration: "1 year" },
   {
     item: "Purchased replacement parts (except salt cells/electrodes below)",
     duration: "90 days",
   },
-  { item: "Replacement salt chlorine generator cells & electrodes", duration: "1 year" },
+  {
+    item: "Replacement salt chlorine generator cells & electrodes",
+    duration: "1 year",
+  },
   { item: "Maintenance tools", duration: "90 days" },
-  { item: "Commercial applications (unless a shorter period is listed above)", duration: "1 year" },
+  {
+    item: "Commercial applications (unless a shorter period is listed above)",
+    duration: "1 year",
+  },
 ];
 
 const notCoveredCauses = [
@@ -62,7 +74,6 @@ export default function WarrantyPage() {
       {/* INTRO */}
       <section className="bg-white py-20">
         <Container>
-          <PageBrand variant="light" />
           <div className="max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
               Warranty
@@ -71,29 +82,28 @@ export default function WarrantyPage() {
               Jandy Limited Warranty
             </h1>
             <p className="mt-5 text-base leading-relaxed text-navy/70">
-              Zodiac Pool Systems LLC, a Fluidra Company (&ldquo;Fluidra&rdquo;),
-              warrants all Jandy® branded products to be free from
-              manufacturing defects in materials and workmanship for a
-              period of one (1) year from the date of retail purchase, with
-              the exceptions listed below. The complete salt water
+              Zodiac Pool Systems LLC, a Fluidra Company
+              (&ldquo;Fluidra&rdquo;), warrants all Jandy® branded products to
+              be free from manufacturing defects in materials and workmanship
+              for a period of one (1) year from the date of retail purchase,
+              with the exceptions listed below. The complete salt water
               chlorinator system we install &mdash; controller and cell
-              purchased and installed together &mdash; is covered for three
-              (3) years.
+              purchased and installed together &mdash; is covered for three (3)
+              years.
             </p>
-            <a
+            <Button
               href={jandyWarrantyPdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
+              className="mt-6 px-6 py-3"
             >
               <DownloadIcon className="size-4" />
               Download the Full Warranty (PDF)
-            </a>
+            </Button>
             <p className="mt-3 text-xs text-navy/50">
               Document H0333803 Rev AB &middot; This page summarizes the
-              official Jandy Limited Warranty. Always refer to the PDF above
-              for the complete, current terms directly from the
-              manufacturer.
+              official Jandy Limited Warranty. Always refer to the PDF above for
+              the complete, current terms directly from the manufacturer.
             </p>
           </div>
         </Container>
@@ -117,7 +127,11 @@ export default function WarrantyPage() {
                 {coveragePeriods.map((row, i) => (
                   <tr
                     key={row.item}
-                    className={i !== coveragePeriods.length - 1 ? "border-b border-navy/10" : ""}
+                    className={
+                      i !== coveragePeriods.length - 1
+                        ? "border-b border-navy/10"
+                        : ""
+                    }
                   >
                     <td className="px-5 py-4 text-navy/80">{row.item}</td>
                     <td className="whitespace-nowrap px-5 py-4 text-right font-bold text-navy">
@@ -133,12 +147,12 @@ export default function WarrantyPage() {
             <li>&bull; Refrigerant and other expendables are not warranted.</li>
             <li>
               &bull; Replacement products or parts provided at no charge are
-              warranted only until the original product&rsquo;s warranty
-              would have expired.
+              warranted only until the original product&rsquo;s warranty would
+              have expired.
             </li>
             <li>
-              &bull; TruGuard® mineral cartridges are covered under the
-              separate Nature2 mineral cartridge limited warranty.
+              &bull; TruGuard® mineral cartridges are covered under the separate
+              Nature2 mineral cartridge limited warranty.
             </li>
           </ul>
         </Container>
@@ -155,22 +169,21 @@ export default function WarrantyPage() {
               What this warranty doesn&rsquo;t cover
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              This warranty applies only to products installed and serviced
-              by a licensed, qualified pool equipment contractor, purchased
-              and used in the 50 United States or Canada. It&rsquo;s limited
-              to the first retail purchaser, is not transferable, and
-              doesn&rsquo;t apply to products moved from their original
-              installation site. It also does not apply to products
-              purchased through the internet or other e-commerce platforms
-              (with limited exceptions for small valves, parts, and
-              accessories). Fluidra&rsquo;s liability is limited to
-              replacement of the defective product or parts &mdash; it does
-              not cover transportation costs, labor, or materials needed to
-              make the repair.
+              This warranty applies only to products installed and serviced by a
+              licensed, qualified pool equipment contractor, purchased and used
+              in the 50 United States or Canada. It&rsquo;s limited to the first
+              retail purchaser, is not transferable, and doesn&rsquo;t apply to
+              products moved from their original installation site. It also does
+              not apply to products purchased through the internet or other
+              e-commerce platforms (with limited exceptions for small valves,
+              parts, and accessories). Fluidra&rsquo;s liability is limited to
+              replacement of the defective product or parts &mdash; it does not
+              cover transportation costs, labor, or materials needed to make the
+              repair.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              This warranty does not cover failures, defects, malfunctions,
-              or complaints resulting from any of the following:
+              This warranty does not cover failures, defects, malfunctions, or
+              complaints resulting from any of the following:
             </p>
           </div>
 
@@ -200,32 +213,31 @@ export default function WarrantyPage() {
             </h2>
             <div className="mt-6 space-y-4 text-sm leading-relaxed text-navy/70">
               <p>
-                This is the only warranty given by Fluidra. No one is
-                authorized to make any other warranties on behalf of
-                Fluidra. The duration of implied warranties, including the
-                implied warranty of merchantability and the implied warranty
-                of fitness for a particular purpose, are limited to the
-                duration of the express warranties listed above. Some states
-                and/or provinces do not allow limitations on how long an
-                implied warranty lasts, so the above limitation may not
-                apply to you. For products installed in a commercial
-                application, all implied warranties are expressly disclaimed
-                in their entirety.
+                This is the only warranty given by Fluidra. No one is authorized
+                to make any other warranties on behalf of Fluidra. The duration
+                of implied warranties, including the implied warranty of
+                merchantability and the implied warranty of fitness for a
+                particular purpose, are limited to the duration of the express
+                warranties listed above. Some states and/or provinces do not
+                allow limitations on how long an implied warranty lasts, so the
+                above limitation may not apply to you. For products installed in
+                a commercial application, all implied warranties are expressly
+                disclaimed in their entirety.
               </p>
               <p>
                 Fluidra expressly disclaims and excludes any liability for
                 consequential, incidental, indirect, or punitive damages for
-                breach of any expressed or implied warranty, including
-                damage to vinyl liners, plaster, pool surfaces, tile, stone,
-                coping, fixtures, skimmers, plumbing, drains, equipment
-                covers, landscaping, animals, plants, or dwellings. Some
-                states and/or provinces do not allow the exclusion or
-                limitation of incidental or consequential damages, so the
-                above limitation may not apply to you.
+                breach of any expressed or implied warranty, including damage to
+                vinyl liners, plaster, pool surfaces, tile, stone, coping,
+                fixtures, skimmers, plumbing, drains, equipment covers,
+                landscaping, animals, plants, or dwellings. Some states and/or
+                provinces do not allow the exclusion or limitation of incidental
+                or consequential damages, so the above limitation may not apply
+                to you.
               </p>
               <p>
-                This warranty gives you specific legal rights. You may also
-                have other rights that vary by state and/or province.
+                This warranty gives you specific legal rights. You may also have
+                other rights that vary by state and/or province.
               </p>
             </div>
           </div>
@@ -243,10 +255,10 @@ export default function WarrantyPage() {
               Something not working right?
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
-              As your installer, we&rsquo;re happy to help walk you through
-              a warranty claim. For warranty consideration, have the
-              following ready: proof of purchase, model number, serial
-              number, date of retail purchase, and date of installation.
+              As your installer, we&rsquo;re happy to help walk you through a
+              warranty claim. For warranty consideration, have the following
+              ready: proof of purchase, model number, serial number, date of
+              retail purchase, and date of installation.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-white/80">
               <li className="flex items-start gap-2">

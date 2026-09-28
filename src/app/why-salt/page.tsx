@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import Button from "@/components/Button";
 import Container from "@/components/Container";
-import PageBrand from "@/components/PageBrand";
 import { quoteButtonLabel, quoteHref } from "@/lib/site-config";
 import {
   ArrowRightIcon,
@@ -96,7 +95,6 @@ export default function WhySaltPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40" />
         <Container className="relative py-20 sm:py-28">
-          <PageBrand variant="dark" />
           <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
             Why Salt?
           </p>
@@ -104,17 +102,14 @@ export default function WhySaltPage() {
             The Benefits of a Salt Water Pool
           </h1>
           <p className="mt-6 max-w-xl text-base sm:text-lg text-white/75 leading-relaxed">
-            Softer water, fewer chemicals, and a pool that&rsquo;s simply
-            easier to own. Here&rsquo;s what changes when you make the
-            switch — and the equipment that makes it possible.
+            Softer water, fewer chemicals, and a pool that&rsquo;s simply easier
+            to own. Here&rsquo;s what changes when you make the switch — and the
+            equipment that makes it possible.
           </p>
-          <Link
-            href={quoteHref}
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
-          >
+          <Button href={quoteHref} className="mt-8 px-7 py-3.5">
             {quoteButtonLabel}
             <ArrowRightIcon className="size-4" />
-          </Link>
+          </Button>
         </Container>
       </section>
 
@@ -170,10 +165,9 @@ export default function WhySaltPage() {
               Professional-Grade Equipment, Installed by Us
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
-              We only install trusted, professional-grade salt systems
-              (Jandy TruClear®) — built to be reliable and easy to live
-              with, backed by a manufacturer warranty and our own
-              workmanship.
+              We only install trusted, professional-grade salt systems (Jandy
+              TruClear®) — built to be reliable and easy to live with, backed by
+              a manufacturer warranty and our own workmanship.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
@@ -282,13 +276,10 @@ export default function WhySaltPage() {
           <p className="mt-4 max-w-xl mx-auto text-white/70">
             You already own the pool. Now upgrade the way you enjoy it!
           </p>
-          <Link
-            href={quoteHref}
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
-          >
+          <Button href={quoteHref} className="mt-8 px-8 py-3.5">
             {quoteButtonLabel}
             <ArrowRightIcon className="size-4" />
-          </Link>
+          </Button>
         </Container>
       </section>
     </>

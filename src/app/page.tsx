@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { quoteButtonLabel, quoteHref, siteConfig } from "@/lib/site-config";
+import Button from "@/components/Button";
 import Container from "@/components/Container";
-import PageBrand from "@/components/PageBrand";
 import ReviewCard from "@/components/ReviewCard";
 import ServiceArea from "@/components/ServiceArea";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
@@ -58,17 +58,16 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-navy">
+      <section className="relative min-h-[calc(100dvh-136px)] overflow-hidden bg-navy">
         <Image
-          src="/assets/images/home/pool.jpg"
-          alt="A backyard salt water pool surrounded by palm trees"
+          src="/assets/images/home/girls-in-pool.jpg"
+          alt=""
           fill
           priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/65 to-navy/15" />
         <Container className="relative py-20 sm:py-28">
-          <PageBrand variant="light" />
           <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
             Salt System Installation &amp; Pool Conversion
           </p>
@@ -85,19 +84,13 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Link
-              href={quoteHref}
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
-            >
+            <Button href={quoteHref} variant="soft" className="px-7 py-3.5">
               {quoteButtonLabel}
               <ArrowRightIcon className="size-4" />
-            </Link>
-            <Link
-              href="/why-salt"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white hover:bg-white/10 transition-colors"
-            >
+            </Button>
+            <Button href="/why-salt" variant="outline" className="px-7 py-3.5">
               Why Salt?
-            </Link>
+            </Button>
           </div>
 
           <ul className="mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-x-8 gap-y-3">
@@ -296,13 +289,10 @@ export default function Home() {
             <p className="mt-4 max-w-xl mx-auto text-white/70 lg:mx-0">
               You already own the pool. Now upgrade the way you enjoy it!
             </p>
-            <Link
-              href={quoteHref}
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
-            >
+            <Button href={quoteHref} className="mt-8 px-8 py-3.5">
               {quoteButtonLabel}
               <ArrowRightIcon className="size-4" />
-            </Link>
+            </Button>
           </div>
         </Container>
       </section>

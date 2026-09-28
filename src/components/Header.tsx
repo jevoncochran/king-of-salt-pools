@@ -16,6 +16,7 @@ import {
   ShieldCheckIcon,
   XIcon,
 } from "@/components/icons";
+import Button from "@/components/Button";
 import Container from "@/components/Container";
 
 const MENU_TRANSITION_MS = 300;
@@ -129,12 +130,9 @@ export default function Header() {
             </nav>
 
             <div className="hidden lg:block">
-              <Link
-                href={quoteHref}
-                className="inline-flex items-center rounded-md bg-gold px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
-              >
+              <Button href={quoteHref} className="px-5 py-2.5">
                 {quoteButtonLabel}
-              </Link>
+              </Button>
             </div>
 
             <button
@@ -172,13 +170,13 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
+            <Button
               href={quoteHref}
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-md bg-gold px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
+              className="mt-4 px-5 py-3.5"
             >
               {quoteButtonLabel}
-            </Link>
+            </Button>
           </nav>
         </div>
       )}
