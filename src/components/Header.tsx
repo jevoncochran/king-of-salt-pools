@@ -101,21 +101,30 @@ export default function Header() {
 
         {/* Main nav */}
         <div className="bg-white border-b border-navy/10">
-          <Container className="h-24 flex items-center justify-between gap-4">
-            <Link
-              href="/"
-              className="shrink-0"
-              onClick={() => setOpen(false)}
-            >
-              <Image
-                src="/assets/images/shared/logo.png"
-                alt={siteConfig.name}
-                width={260}
-                height={66}
-                priority
-                className="h-14 w-auto lg:h-20"
-              />
-            </Link>
+          <Container className="min-h-24 py-3 flex items-center justify-between gap-4">
+            <div className="flex flex-col items-center gap-1">
+              <Link
+                href="/"
+                className="shrink-0"
+                onClick={() => setOpen(false)}
+              >
+                <Image
+                  src="/assets/images/shared/logo.png"
+                  alt={siteConfig.name}
+                  width={260}
+                  height={66}
+                  priority
+                  className="h-14 w-auto lg:h-20"
+                />
+              </Link>
+              <a
+                href={siteConfig.phoneHref}
+                className="flex items-center gap-1.5 text-xs font-semibold text-navy/70 hover:text-gold-dark transition-colors lg:text-sm"
+              >
+                <PhoneIcon className="size-3.5 shrink-0" />
+                {siteConfig.phone}
+              </a>
+            </div>
 
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
