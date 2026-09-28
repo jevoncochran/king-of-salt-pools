@@ -11,6 +11,7 @@ import {
 import { siteConfig } from "@/lib/site-config";
 import { formatPhoneNumber } from "@/lib/format";
 import { ArrowRightIcon, CheckCircleIcon } from "@/components/icons";
+import Button from "@/components/Button";
 import Toast from "@/components/Toast";
 
 const initialFormData = {
@@ -388,14 +389,14 @@ export default function ContactForm() {
           </p>
         )}
 
-        <button
+        <Button
           type="submit"
           disabled={submitting}
-          className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors disabled:opacity-60"
+          className="mt-8 w-full px-7 py-3.5 disabled:opacity-60"
         >
           {submitting ? "Submitting..." : "See My Price"}
           {!submitting && <ArrowRightIcon className="size-4" />}
-        </button>
+        </Button>
         <p className="mt-3 text-center text-xs text-navy/50">
           *Indicates a required field. Please also provide a phone number or an
           email address.

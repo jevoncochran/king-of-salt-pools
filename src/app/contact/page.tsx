@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/Container";
 import ContactForm from "@/components/ContactForm";
-import PageBrand from "@/components/PageBrand";
 
 export const metadata: Metadata = {
   title: "Contact Us & Get a Quote",
@@ -14,7 +13,6 @@ export default function ContactPage() {
   return (
     <section className="bg-sand py-20">
       <Container>
-        <PageBrand variant="light" />
         <div className="max-w-2xl">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
             Get Your Quote

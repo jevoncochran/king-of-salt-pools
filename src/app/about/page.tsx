@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import Button from "@/components/Button";
 import Container from "@/components/Container";
-import PageBrand from "@/components/PageBrand";
 import FamilyVideo from "@/components/FamilyVideo";
 import { quoteButtonLabel, quoteHref, siteConfig } from "@/lib/site-config";
 import {
@@ -76,7 +75,6 @@ export default function AboutPage() {
       {/* INTRO */}
       <section className="bg-white py-20">
         <Container>
-          <PageBrand variant="light" />
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
@@ -235,13 +233,10 @@ export default function AboutPage() {
           <p className="mt-4 max-w-xl mx-auto text-white/70">
             Call today to have your salt water system installed tomorrow!
           </p>
-          <Link
-            href={quoteHref}
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-gold-light transition-colors"
-          >
+          <Button href={quoteHref} className="mt-8 px-8 py-3.5">
             {quoteButtonLabel}
             <ArrowRightIcon className="size-4" />
-          </Link>
+          </Button>
         </Container>
       </section>
     </>
