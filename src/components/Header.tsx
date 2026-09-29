@@ -119,9 +119,9 @@ export default function Header() {
               </Link>
               <a
                 href={siteConfig.phoneHref}
-                className="flex items-center gap-1.5 text-xs font-semibold text-navy/70 hover:text-gold-dark transition-colors lg:text-sm"
+                className="flex items-center gap-1.5 text-sm font-bold text-navy hover:text-gold-dark transition-colors lg:text-base"
               >
-                <PhoneIcon className="size-3.5 shrink-0" />
+                <PhoneIcon className="size-4 shrink-0" />
                 {siteConfig.phone}
               </a>
             </div>
