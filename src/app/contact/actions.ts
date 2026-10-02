@@ -72,19 +72,35 @@ export async function submitQuoteRequest(data: QuoteRequest) {
       ]
     : undefined;
 
-  const { error } = await resend.emails.send({
-    from: `${siteConfig.name} Website <onboarding@resend.dev>`,
-    // to: siteConfig.email,
-    to: "jevon@interconvisuals.com",
+  const message = {
     ...(data.email.trim() ? { replyTo: data.email } : {}),
     subject: `New Quote Request from ${fullName}`,
     html,
     attachments,
+  };
+
+  const { error } = await resend.emails.send({
+    ...message,
+    from: `${siteConfig.name} Website <quotes@kingofsaltpools.com>`,
+    to: siteConfig.email,
   });
 
   if (error) {
-    console.error("Resend failed to send quote request email:", error);
-    throw new Error("Failed to send quote request email");
+    console.error("Resend failed to send quote request to client:", error);
+
+    // Temporary: until kingofsaltpools.com is verified in Resend, the client
+    // inbox is rejected. Deliver to the developer so no lead is lost.
+    const fallback = await resend.emails.send({
+      ...message,
+      from: `${siteConfig.name} Website <onboarding@resend.dev>`,
+      to: `${siteConfig.email}`,
+      subject: `[Forward to ${siteConfig.email}] ${message.subject}`,
+    });
+
+    if (fallback.error) {
+      console.error("Resend fallback also failed:", fallback.error);
+      throw new Error("Failed to send quote request email");
+    }
   }
 
   return { success: true as const };
