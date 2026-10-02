@@ -99,7 +99,7 @@ export default function WhySaltPage() {
             The Benefits of a Salt Water Pool
           </h1>
           <p className="mt-6 max-w-xl text-base sm:text-lg text-white/75 leading-relaxed">
-            Softer water, fewer chemicals, and a pool that&rsquo;s simply easier
+            Softer wate, fewer chemicals, and a pool that&rsquo;s simply easier
             to own. Here&rsquo;s what changes when you make the switch — and the
             equipment that makes it possible.
           </p>
