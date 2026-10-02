@@ -10,12 +10,12 @@ import {
   siteConfig,
 } from "@/lib/site-config";
 import {
-  MailIcon,
-  MenuIcon,
-  PhoneIcon,
-  ShieldCheckIcon,
-  XIcon,
-} from "@/components/icons";
+  Mail,
+  Menu,
+  Phone,
+  ShieldCheck,
+  X,
+} from "lucide-react";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 
@@ -77,7 +77,7 @@ export default function Header() {
         <div className="bg-navy text-white/85 text-xs sm:text-sm">
           <Container className="h-10 flex items-center justify-between gap-4">
             <span className="flex items-center gap-1.5">
-              <ShieldCheckIcon className="size-4 shrink-0" />
+              <ShieldCheck className="size-4 shrink-0" />
               {siteConfig.license}
             </span>
             <div className="flex items-center gap-6">
@@ -85,14 +85,14 @@ export default function Header() {
                 href={`mailto:${siteConfig.email}`}
                 className="hidden sm:flex items-center gap-1.5 hover:text-gold-light transition-colors"
               >
-                <MailIcon className="size-4 shrink-0" />
+                <Mail className="size-4 shrink-0" />
                 {siteConfig.email}
               </a>
               <a
                 href={siteConfig.phoneHref}
                 className="flex items-center gap-1.5 font-semibold text-white hover:text-gold-light transition-colors"
               >
-                <PhoneIcon className="size-4 shrink-0" />
+                <Phone className="size-4 shrink-0" />
                 {siteConfig.phone}
               </a>
             </div>
@@ -121,7 +121,7 @@ export default function Header() {
                 href={siteConfig.phoneHref}
                 className="flex items-center gap-1.5 text-sm font-bold text-navy hover:text-gold-dark transition-colors lg:text-base"
               >
-                <PhoneIcon className="size-4 shrink-0" />
+                <Phone className="size-4 shrink-0" />
                 {siteConfig.phone}
               </a>
             </div>
@@ -152,9 +152,9 @@ export default function Header() {
               className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-navy hover:bg-sand"
             >
               {open ? (
-                <XIcon className="size-6" />
+                <X className="size-6" />
               ) : (
-                <MenuIcon className="size-6" />
+                <Menu className="size-6" />
               )}
             </button>
           </Container>

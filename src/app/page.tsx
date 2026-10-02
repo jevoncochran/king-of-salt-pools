@@ -11,15 +11,15 @@ import {
   jandyTruclearReviews,
 } from "@/lib/jandy-truclear-reviews";
 import {
-  ArrowRightIcon,
-  CheckCircleIcon,
-  DropletIcon,
-  LeafIcon,
-  ShieldCheckIcon,
-  SmileIcon,
-  SparkleIcon,
-  StarIcon,
-} from "@/components/icons";
+  ArrowRight,
+  CircleCheck,
+  Droplet,
+  Leaf,
+  ShieldCheck,
+  Smile,
+  Sparkles,
+  Star,
+} from "lucide-react";
 
 const heroTrustBullets = [
   "Family Owned & Operated",
@@ -29,25 +29,25 @@ const heroTrustBullets = [
 
 const benefits = [
   {
-    icon: DropletIcon,
+    icon: Droplet,
     title: "Softer-Feeling Water",
     description:
       "Salt systems create gentle, silky water that's easier on your skin than traditional chlorine pools.",
   },
   {
-    icon: SparkleIcon,
+    icon: Sparkles,
     title: "Less Chemical Handling",
     description:
       "Your system generates chlorine automatically, so there's far less buying, storing, and pouring of harsh chemicals.",
   },
   {
-    icon: LeafIcon,
+    icon: Leaf,
     title: "Simpler Pool Care",
     description:
       "Consistent, automatic sanitation means fewer surprises and a more predictable maintenance routine.",
   },
   {
-    icon: SmileIcon,
+    icon: Smile,
     title: "Red Eyes, No More",
     description:
       "Lower, steadier chlorine levels mean less irritation for eyes, skin, and swimwear.",
@@ -68,10 +68,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/65 to-navy/15" />
         <Container className="relative py-20 sm:py-28">
-          <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
-            Salt System Installation &amp; Pool Conversion
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+          <h1 className="max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
             Turn Your Pool Into
             <br />
             <span className="text-gold">A Salt Water Pool</span>
@@ -86,7 +83,7 @@ export default function Home() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Button href={quoteHref} variant="soft" className="px-7 py-3.5">
               {quoteButtonLabel}
-              <ArrowRightIcon className="size-4" />
+              <ArrowRight className="size-4" />
             </Button>
             <Button href="/why-salt" variant="outline" className="px-7 py-3.5">
               Why Salt?
@@ -99,7 +96,7 @@ export default function Home() {
                 key={item}
                 className="flex items-center gap-2 text-sm text-white/85"
               >
-                <ShieldCheckIcon className="size-5 text-gold shrink-0" />
+                <ShieldCheck className="size-5 text-gold shrink-0" />
                 {item}
               </li>
             ))}
@@ -111,10 +108,7 @@ export default function Home() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Why Salt?
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               A better way to enjoy your pool
             </h2>
           </div>
@@ -141,7 +135,7 @@ export default function Home() {
             className="mt-10 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gold-dark hover:text-navy transition-colors"
           >
             See all the benefits of salt
-            <ArrowRightIcon className="size-4" />
+            <ArrowRight className="size-4" />
           </Link>
         </Container>
       </section>
@@ -150,10 +144,7 @@ export default function Home() {
       <section className="bg-sand py-20">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              See It In Action
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               See a Salt System in Action
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
@@ -190,7 +181,7 @@ export default function Home() {
             },
           ].map((item) => (
             <div key={item.title} className="flex gap-4">
-              <CheckCircleIcon className="size-7 shrink-0 text-gold-dark" />
+              <CircleCheck className="size-7 shrink-0 text-gold-dark" />
               <div>
                 <h3 className="font-bold text-navy">{item.title}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-navy/70">
@@ -206,7 +197,7 @@ export default function Home() {
             className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gold-dark hover:text-navy transition-colors"
           >
             More about our background
-            <ArrowRightIcon className="size-4" />
+            <ArrowRight className="size-4" />
           </Link>
         </Container>
       </section>
@@ -215,10 +206,7 @@ export default function Home() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-2xl text-center mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Real Reviews
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Salt pool owners{" "}
               <span className="font-accent italic text-gold-dark">love</span>{" "}
               their results
@@ -226,7 +214,7 @@ export default function Home() {
             <div className="mt-4 flex items-center justify-center gap-2 text-sm text-navy/70">
               <div className="flex gap-0.5 text-gold">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <StarIcon key={i} className="size-4" />
+                  <Star key={i} className="size-4 fill-current" />
                 ))}
               </div>
               <span className="font-bold text-navy">
@@ -257,7 +245,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gold-dark hover:text-navy transition-colors"
             >
               See all {jandyReviewSummary.totalReviews} reviews on Jandy.com
-              <ArrowRightIcon className="size-4" />
+              <ArrowRight className="size-4" />
             </a>
           </div>
         </Container>
@@ -291,7 +279,7 @@ export default function Home() {
             </p>
             <Button href={quoteHref} className="mt-8 px-8 py-3.5">
               {quoteButtonLabel}
-              <ArrowRightIcon className="size-4" />
+              <ArrowRight className="size-4" />
             </Button>
           </div>
         </Container>

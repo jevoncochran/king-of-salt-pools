@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { initials, relativeTime } from "@/lib/format";
-import { StarIcon } from "@/components/icons";
+import { Star } from "lucide-react";
 import type { JandyReview } from "@/lib/jandy-truclear-reviews";
 
 export default function ReviewCard({ name, rating, comment, date }: JandyReview) {
@@ -29,9 +29,9 @@ export default function ReviewCard({ name, rating, comment, date }: JandyReview)
 
       <div className="mt-3 flex gap-0.5 text-gold">
         {Array.from({ length: 5 }).map((_, i) => (
-          <StarIcon
+          <Star
             key={i}
-            className={`size-4 ${i < rating ? "text-gold" : "text-navy/15"}`}
+            className={`size-4 fill-current ${i < rating ? "text-gold" : "text-navy/15"}`}
           />
         ))}
       </div>

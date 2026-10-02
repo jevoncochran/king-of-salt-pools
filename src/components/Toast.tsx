@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { XIcon } from "@/components/icons";
+import { X } from "lucide-react";
 
 export default function Toast({
   message,
@@ -25,7 +25,7 @@ export default function Toast({
           aria-label="Dismiss"
           className="shrink-0 text-navy/40 hover:text-navy"
         >
-          <XIcon className="size-4" />
+          <X className="size-4" />
         </button>
       </div>
     </div>

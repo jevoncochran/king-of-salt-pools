@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import { siteConfig } from "@/lib/site-config";
-import { CheckCircleIcon, DownloadIcon, XIcon } from "@/components/icons";
+import { CircleCheck, Download, X } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Warranty",
@@ -75,10 +75,7 @@ export default function WarrantyPage() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Warranty
-            </p>
-            <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Jandy Limited Warranty
             </h1>
             <p className="mt-5 text-base leading-relaxed text-navy/70">
@@ -97,7 +94,7 @@ export default function WarrantyPage() {
               rel="noopener noreferrer"
               className="mt-6 px-6 py-3"
             >
-              <DownloadIcon className="size-4" />
+              <Download className="size-4" />
               Download the Full Warranty (PDF)
             </Button>
             <p className="mt-3 text-xs text-navy/50">
@@ -113,10 +110,7 @@ export default function WarrantyPage() {
       <section className="bg-sand py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Coverage Periods
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               How long your equipment is covered
             </h2>
           </div>
@@ -162,10 +156,7 @@ export default function WarrantyPage() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Exclusions
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               What this warranty doesn&rsquo;t cover
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
@@ -193,7 +184,7 @@ export default function WarrantyPage() {
                 key={cause}
                 className="flex gap-3 rounded-lg border border-navy/10 bg-mist p-4 text-sm leading-relaxed text-navy/70"
               >
-                <XIcon className="size-4 shrink-0 mt-0.5 text-navy/40" />
+                <X className="size-4 shrink-0 mt-0.5 text-navy/40" />
                 {cause}
               </li>
             ))}
@@ -205,10 +196,7 @@ export default function WarrantyPage() {
       <section className="bg-sand py-20">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Additional Terms
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               The fine print
             </h2>
             <div className="mt-6 space-y-4 text-sm leading-relaxed text-navy/70">
@@ -248,10 +236,7 @@ export default function WarrantyPage() {
       <section className="bg-navy py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-light">
-              Filing a Claim
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-white">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
               Something not working right?
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
@@ -262,12 +247,12 @@ export default function WarrantyPage() {
             </p>
             <ul className="mt-6 space-y-2 text-sm text-white/80">
               <li className="flex items-start gap-2">
-                <CheckCircleIcon className="size-4 shrink-0 mt-0.5 text-gold" />
+                <CircleCheck className="size-4 shrink-0 mt-0.5 text-gold" />
                 Call {siteConfig.name} at {siteConfig.phone} and we&rsquo;ll
                 help get the claim started.
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircleIcon className="size-4 shrink-0 mt-0.5 text-gold" />
+                <CircleCheck className="size-4 shrink-0 mt-0.5 text-gold" />
                 Or contact Fluidra&rsquo;s Technical Support directly at
                 800-822-7933 or productsupport@fluidra.com.
               </li>
@@ -280,10 +265,7 @@ export default function WarrantyPage() {
       <section className="bg-white py-16">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Downloads
-            </p>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-extrabold text-navy">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy">
               Warranty &amp; brochures
             </h2>
           </div>
@@ -294,7 +276,7 @@ export default function WarrantyPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-navy/15 px-6 py-3 text-sm font-bold uppercase tracking-wide text-navy hover:border-gold transition-colors"
             >
-              <DownloadIcon className="size-4" />
+              <Download className="size-4" />
               Jandy Limited Warranty (PDF)
             </a>
             <a
@@ -303,7 +285,7 @@ export default function WarrantyPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-navy/15 px-6 py-3 text-sm font-bold uppercase tracking-wide text-navy hover:border-gold transition-colors"
             >
-              <DownloadIcon className="size-4" />
+              <Download className="size-4" />
               TruClear Product Brochure (PDF)
             </a>
           </div>

@@ -1,16 +1,11 @@
 import { serviceAreaCities, siteConfig } from "@/lib/site-config";
-import { MapPinIcon } from "@/components/icons";
+import { MapPin } from "lucide-react";
 
 export default function ServiceArea() {
   return (
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <div className="flex items-center gap-3">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-            Areas We Serve
-          </p>
-        </div>
-        <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
           Bringing Salt Water to Pools Across the Tampa Bay
         </h2>
         <p className="mt-4 max-w-md text-sm leading-relaxed text-navy/70">
@@ -25,7 +20,7 @@ export default function ServiceArea() {
               key={city}
               className="inline-flex items-center gap-2 rounded-lg border border-navy/10 bg-white px-4 py-3 text-sm font-semibold text-navy"
             >
-              <MapPinIcon className="size-4 shrink-0 text-gold-dark" />
+              <MapPin className="size-4 shrink-0 text-gold-dark" />
               {city}
             </li>
           ))}
