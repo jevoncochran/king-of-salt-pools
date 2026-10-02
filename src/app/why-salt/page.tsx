@@ -4,17 +4,17 @@ import Button from "@/components/Button";
 import Container from "@/components/Container";
 import { quoteButtonLabel, quoteHref } from "@/lib/site-config";
 import {
-  ArrowRightIcon,
-  BoltIcon,
-  DownloadIcon,
-  DropletIcon,
-  EyeIcon,
-  LeafIcon,
-  ShieldCheckIcon,
-  SmileIcon,
-  SparkleIcon,
-  WrenchIcon,
-} from "@/components/icons";
+  ArrowRight,
+  Zap,
+  Download,
+  Droplet,
+  Eye,
+  Leaf,
+  ShieldCheck,
+  Smile,
+  Sparkles,
+  Wrench,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Why Salt?",
@@ -24,25 +24,25 @@ export const metadata: Metadata = {
 
 const coreBenefits = [
   {
-    icon: DropletIcon,
+    icon: Droplet,
     title: "Softer-Feeling Water",
     description:
       "Salt systems produce gentle, silky water without the harsh, drying effect of traditionally-dosed chlorine — your skin and hair will notice the difference.",
   },
   {
-    icon: SparkleIcon,
+    icon: Sparkles,
     title: "Less Chemical Handling",
     description:
       "The system generates its own chlorine from dissolved salt, so there's far less buying, measuring, and pouring of harsh chemicals into your pool.",
   },
   {
-    icon: LeafIcon,
+    icon: Leaf,
     title: "Simpler Pool Care",
     description:
       "Consistent, automatic sanitation means fewer surprises, less guesswork, and a more predictable routine for keeping your water balanced.",
   },
   {
-    icon: SmileIcon,
+    icon: Smile,
     title: "Red Eyes, No More",
     description:
       "Lower, steadier chlorine levels are far gentler on eyes, skin, and swimwear than the spikes that come with manually dosed pools.",
@@ -51,25 +51,25 @@ const coreBenefits = [
 
 const productFeatures = [
   {
-    icon: EyeIcon,
+    icon: Eye,
     title: "Easy to Check",
     description:
       "A simple viewing window lets you check for buildup in seconds — no tools, no guesswork, no need to take anything apart.",
   },
   {
-    icon: WrenchIcon,
+    icon: Wrench,
     title: "Low Maintenance",
     description:
       "Cleaning and servicing takes minutes, and the system helps prevent buildup on its own between visits.",
   },
   {
-    icon: ShieldCheckIcon,
+    icon: ShieldCheck,
     title: "Built to Last",
     description:
       "Durable construction backed by a 3-year manufacturer warranty, so you're covered for years to come.",
   },
   {
-    icon: BoltIcon,
+    icon: Zap,
     title: "Works With Your Pump",
     description:
       "Runs efficiently even at low flow, so it plays nicely with modern energy-saving pool pumps.",
@@ -95,10 +95,7 @@ export default function WhySaltPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40" />
         <Container className="relative py-20 sm:py-28">
-          <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gold-light">
-            Why Salt?
-          </p>
-          <h1 className="mt-4 max-w-2xl text-4xl sm:text-5xl font-extrabold leading-tight text-white">
+          <h1 className="max-w-2xl text-4xl sm:text-5xl font-extrabold leading-tight text-white">
             The Benefits of a Salt Water Pool
           </h1>
           <p className="mt-6 max-w-xl text-base sm:text-lg text-white/75 leading-relaxed">
@@ -108,7 +105,7 @@ export default function WhySaltPage() {
           </p>
           <Button href={quoteHref} className="mt-8 px-7 py-3.5">
             {quoteButtonLabel}
-            <ArrowRightIcon className="size-4" />
+            <ArrowRight className="size-4" />
           </Button>
         </Container>
       </section>
@@ -117,10 +114,7 @@ export default function WhySaltPage() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              The Difference
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               A better way to enjoy your pool
             </h2>
           </div>
@@ -158,10 +152,7 @@ export default function WhySaltPage() {
           </div>
 
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Our Equipment
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Professional-Grade Equipment, Installed by Us
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
@@ -190,7 +181,7 @@ export default function WhySaltPage() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gold-dark hover:text-navy transition-colors"
             >
-              <DownloadIcon className="size-4" />
+              <Download className="size-4" />
               Download the Full Brochure (PDF)
             </a>
           </div>
@@ -201,10 +192,7 @@ export default function WhySaltPage() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Built to Last
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Simple, reliable, and easy to maintain
             </h2>
           </div>
@@ -278,7 +266,7 @@ export default function WhySaltPage() {
           </p>
           <Button href={quoteHref} className="mt-8 px-8 py-3.5">
             {quoteButtonLabel}
-            <ArrowRightIcon className="size-4" />
+            <ArrowRight className="size-4" />
           </Button>
         </Container>
       </section>

@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { navLinks, quoteHref, siteConfig } from "@/lib/site-config";
 import {
-  ClockIcon,
-  MailIcon,
-  PhoneIcon,
-  ShieldCheckIcon,
-} from "@/components/icons";
+  Clock,
+  Mail,
+  Phone,
+  ShieldCheck,
+} from "lucide-react";
 import Container from "@/components/Container";
 
 export default function Footer() {
@@ -56,7 +56,7 @@ export default function Footer() {
                 href={siteConfig.phoneHref}
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <PhoneIcon className="size-4 shrink-0" />
+                <Phone className="size-4 shrink-0" />
                 {siteConfig.phone}
               </a>
             </li>
@@ -65,7 +65,7 @@ export default function Footer() {
                 href={`mailto:${siteConfig.email}`}
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <MailIcon className="size-4 shrink-0" />
+                <Mail className="size-4 shrink-0" />
                 {siteConfig.email}
               </a>
             </li>
@@ -77,7 +77,7 @@ export default function Footer() {
             Licensed & Insured
           </h3>
           <p className="flex items-center gap-2 text-sm">
-            <ShieldCheckIcon className="size-4 shrink-0" />
+            <ShieldCheck className="size-4 shrink-0" />
             {siteConfig.license}
           </p>
           <p className="mt-3 text-sm text-white/60">

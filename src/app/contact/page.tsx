@@ -14,10 +14,7 @@ export default function ContactPage() {
     <section className="bg-sand py-20">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-            Get Your Quote
-          </p>
-          <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-navy">
             It&rsquo;s Time to Enjoy Your Pool
           </h1>
           <p className="mt-4 text-base leading-relaxed text-navy/70">

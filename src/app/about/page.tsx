@@ -5,12 +5,12 @@ import Container from "@/components/Container";
 import FamilyVideo from "@/components/FamilyVideo";
 import { quoteButtonLabel, quoteHref, siteConfig } from "@/lib/site-config";
 import {
-  ArrowRightIcon,
-  AwardIcon,
-  CheckCircleIcon,
-  HeartIcon,
-  ShieldCheckIcon,
-} from "@/components/icons";
+  ArrowRight,
+  Award,
+  CircleCheck,
+  Heart,
+  ShieldCheck,
+} from "lucide-react";
 
 const familyVideoPlaybackId = "a4BTcRw00mOqsVg00PUsWkBBbBVUx1jJUb9XJOv5hG7ps";
 
@@ -45,24 +45,24 @@ export const metadata: Metadata = {
 
 const credentials = [
   {
-    icon: HeartIcon,
+    icon: Heart,
     title: "25 Years of Experience",
     description:
       "A family owned business with 25 years of salt water swimming pool experience — when you call, you're talking to someone who's been doing this for decades.",
   },
   {
-    icon: ShieldCheckIcon,
+    icon: ShieldCheck,
     title: "Licensed & Insured",
     description: `We're fully licensed and insured (${siteConfig.license}), so every job is backed by real accountability, not just a handshake.`,
   },
   {
-    icon: AwardIcon,
+    icon: Award,
     title: "Jandy Authorized Installer",
     description:
       "Every new salt system we install includes a 3-year warranty, backed by our status as an authorized Jandy installer.",
   },
   {
-    icon: CheckCircleIcon,
+    icon: CircleCheck,
     title: "Professional & Knowledgeable",
     description:
       "We're happy to answer all your questions — before and after the installation of your new system.",
@@ -77,10 +77,7 @@ export default function AboutPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-                About Us
-              </p>
-              <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-navy">
                 25 Years of Salt Water Pool Experience
               </h1>
               <p className="mt-5 text-base leading-relaxed text-navy/70">
@@ -125,10 +122,7 @@ export default function AboutPage() {
       <section className="bg-sand py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Meet the Family
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               The people behind {siteConfig.name}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70">
@@ -168,10 +162,7 @@ export default function AboutPage() {
         <section className="bg-white py-20">
           <Container className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-                Straight From the Family
-              </p>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
                 Hear why we love what we do
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-navy/70">
@@ -193,10 +184,7 @@ export default function AboutPage() {
       <section className="bg-mist py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Why Homeowners Trust Us
-            </p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Trust isn&rsquo;t a tagline for us
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/70 lg:whitespace-nowrap">
@@ -235,7 +223,7 @@ export default function AboutPage() {
           </p>
           <Button href={quoteHref} className="mt-8 px-8 py-3.5">
             {quoteButtonLabel}
-            <ArrowRightIcon className="size-4" />
+            <ArrowRight className="size-4" />
           </Button>
         </Container>
       </section>

@@ -10,7 +10,7 @@ import {
 } from "@/lib/contact-schedule";
 import { siteConfig } from "@/lib/site-config";
 import { formatPhoneNumber } from "@/lib/format";
-import { ArrowRightIcon, CheckCircleIcon } from "@/components/icons";
+import { ArrowRight, CircleCheck } from "lucide-react";
 import Button from "@/components/Button";
 import Toast from "@/components/Toast";
 
@@ -91,9 +91,9 @@ export default function ContactForm() {
 
   if (step === "result") {
     return (
-      <div className="rounded-2xl border border-navy/10 bg-white p-8">
+      <div className="sm:rounded-2xl sm:border sm:border-navy/10 sm:bg-white sm:p-8">
         <div className="flex size-12 items-center justify-center rounded-full bg-gold/15 text-gold-dark">
-          <CheckCircleIcon className="size-7" />
+          <CircleCheck className="size-7" />
         </div>
         <h2 className="mt-4 text-2xl font-extrabold text-navy">
           You&rsquo;re all set, {formData.firstName}!
@@ -156,7 +156,7 @@ export default function ContactForm() {
       <form
         noValidate
         onSubmit={handleSubmit}
-        className="rounded-2xl border border-navy/10 bg-white p-8"
+        className="sm:rounded-2xl sm:border sm:border-navy/10 sm:bg-white sm:p-8"
       >
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
@@ -395,7 +395,7 @@ export default function ContactForm() {
           className="mt-8 w-full px-7 py-3.5 disabled:opacity-60"
         >
           {submitting ? "Submitting..." : "See My Price"}
-          {!submitting && <ArrowRightIcon className="size-4" />}
+          {!submitting && <ArrowRight className="size-4" />}
         </Button>
         <p className="mt-3 text-center text-xs text-navy/50">
           *Indicates a required field. Please also provide a phone number or an
